@@ -230,7 +230,7 @@ const About = () => {
                   Please fill the form or send us an email
                 </Card.Text>
                 <Card.Text className='about-contact-text-2' >
-                  sales@codetowntechnologies.com
+                  hr@codetowntechnologies.com
                 </Card.Text>
               </div>
             </Col>
