@@ -134,40 +134,35 @@ const Services = () => {
                     <img src='/images/service-page/technologies/php.png' alt='php' />
                   </div>
                 </Col>
-                <Col lg={2} xs={3} sm={3} md={4}>
-                  <div className='services-page-image'>
-                    <img src='/images/service-page/technologies/nextdotjs.svg'
-                     alt="next.js"
-                     className="w-11 h-11
-object-contain" />
-                  </div>
-            
+               <Col lg={2} xs={3} sm={3} md={4}>
+  <div className='services-page-image'>
+    <img src='/images/service-page/technologies/nextdotjs.svg' alt='nextjs' />
+  </div>
+</Col>
 
-                </Col>
-                <Col lg={2} xs={3} sm={3} md={4}>
-                  <img src='/images/service-page/technologies/react.svg'
-                     alt="react.js"
-                     className="w-09 h-09
-object-contain" />
-                </Col>
-                 <Col lg={2} xs={3} sm={3} md={4}>
-                  <img src='/images/service-page/technologies/express.svg'
-                     alt="express.svg"
-                     className="w-09 h-09
-object-contain" />
-                </Col>
-                 <Col lg={2} xs={3} sm={3} md={4}>
-                  <img src='/images/service-page/technologies/vuedotjs.svg'
-                     alt="vuedot.svg"
-                     className="w-09 h-09
-object-contain" />
-                </Col>
-                 <Col lg={2} xs={3} sm={3} md={4}>
-                  <img src='/images/service-page/technologies/wix.svg'
-                     alt="wix.js"
-                     className="w-09 h-09
-object-contain" />
-                </Col>
+<Col lg={2} xs={3} sm={3} md={4}>
+  <div className='services-page-image'>
+    <img src='/images/service-page/technologies/react.svg' alt='react' />
+  </div>
+</Col>
+
+<Col lg={2} xs={3} sm={3} md={4}>
+  <div className='services-page-image'>
+    <img src='/images/service-page/technologies/express.svg' alt='express' />
+  </div>
+</Col>
+
+<Col lg={2} xs={3} sm={3} md={4}>
+  <div className='services-page-image'>
+    <img src='/images/service-page/technologies/vuedotjs.svg' alt='vue' />
+  </div>
+</Col>
+
+<Col lg={2} xs={3} sm={3} md={4}>
+  <div className='services-page-image'>
+    <img src='/images/service-page/technologies/wix.svg' alt='wix' />
+  </div>
+</Col>
                 <Col lg={2} xs={3} sm={3} md={4}>
                   <div className='services-page-image'>
                     <img src='/images/service-page/technologies/wordpress.png' alt='wordpress' />

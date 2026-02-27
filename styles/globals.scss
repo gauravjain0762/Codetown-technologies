@@ -3209,3 +3209,44 @@ li {
 .offcanvas {
   border: 0 !important;
 }
+
+//icons
+.services-page-image {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px auto;
+}
+
+.services-page-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+//footer
+.footer-nav-link {
+  color: #ffffff !important;
+  margin-right: 25px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.footer-nav-link-active {
+  color: #ff3c00 !important;
+  border-bottom: 2px solid #ff3c00;
+  margin-right: 25px;
+}
+
+.footer-linkedin {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.footer-linkedin:hover {
+  transform: scale(1.1);
+}

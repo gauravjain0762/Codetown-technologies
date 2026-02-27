@@ -8,12 +8,6 @@ const Footer = () => {
   return (
     <Card className='footer-card'>
       <Container>
-        <Nav className="ml-auto">
-          <Card.Body>
-            <a href='https://www.linkedin.com/company/code-town-technologies/mycompany/?viewAsMember=true' target={'_blank'} rel="noreferrer">
-              <img src='/images/footer/1.png' alt='linkedin' />
-            </a>
-          </Card.Body>
           {/* <Link href="https://www.linkedin.com/company/code-town-technologies/mycompany/?viewAsMember=true" target='_blank' passHref>
             <Nav.Link>
               <img src='/images/footer/1.png' alt='linkedin' />
@@ -25,37 +19,75 @@ const Footer = () => {
           <Link href="#" passHref>
             <Nav.Link><img src='/images/footer/3.png' alt='linkedin' /></Nav.Link>
           </Link> */}
-        </Nav>
+      
 
-        <Nav className="ml-auto">
-          <Link href="/about" passHref>
-            <Nav.Link href="/about" className={router.pathname == '/about' ? 'footer-nav-link-active' : 'footer-nav-link'}>About</Nav.Link>
-          </Link>
-          <Link href="/services" passHref>
-            <Nav.Link href="/services" className={router.pathname == '/services' ? 'footer-nav-link-active' : 'footer-nav-link'}>Services</Nav.Link>
-          </Link>
-          <Link href="/portfolio" passHref>
-            <Nav.Link href="/portfolio" className={router.pathname == '/portfolio' ? 'footer-nav-link-active' : 'footer-nav-link'}>Portfolios</Nav.Link>
-          </Link>
-          {/* <Link href="/team" passHref>
-            <Nav.Link href="/team" className={router.pathname == '/team' ? 'footer-nav-link-active' : 'footer-nav-link'}>Our Team</Nav.Link>
-          </Link>
-          <Link href="/dedicatedDeveloper" passHref>
-            <Nav.Link href="/dedicatedDeveloper" className={router.pathname == '/dedicatedDeveloper' ? 'footer-nav-link-active' : 'footer-nav-link'}>Dedicated Developers</Nav.Link>
-          </Link>
-          <Link href="/github" passHref>
-            <Nav.Link href="/github" className={router.pathname == '/github' ? 'footer-nav-link-active' : 'footer-nav-link'}>Github</Nav.Link>
-          </Link> */}
-          {/* <Link href="/technology" passHref>
-            <Nav.Link className='footer-nav-link'>Technology</Nav.Link>
-          </Link>
-          <Link href="/process" passHref>
-            <Nav.Link className='footer-nav-link'>Process</Nav.Link>
-          </Link>
-          <Link href="/career" passHref>
-            <Nav.Link className='footer-nav-link'>Career</Nav.Link>
-          </Link> */}
-        </Nav>
+       <Row className="align-items-center mb-4">
+  {/* Left Side Links */}
+  <Col
+    lg={10}
+    md={9}
+    sm={8}
+    xs={8}
+    className="d-flex align-items-center"
+  >
+    <Link href="/about" passHref>
+      <Nav.Link
+        className={
+          router.pathname == "/about"
+            ? "footer-nav-link-active"
+            : "footer-nav-link"
+        }
+      >
+        About
+      </Nav.Link>
+    </Link>
+
+    <Link href="/services" passHref>
+      <Nav.Link
+        className={
+          router.pathname == "/services"
+            ? "footer-nav-link-active"
+            : "footer-nav-link"
+        }
+      >
+        Services
+      </Nav.Link>
+    </Link>
+
+    <Link href="/portfolio" passHref>
+      <Nav.Link
+        className={
+          router.pathname == "/portfolio"
+            ? "footer-nav-link-active"
+            : "footer-nav-link"
+        }
+      >
+        Portfolios
+      </Nav.Link>
+    </Link>
+  </Col>
+
+  {/* Right Side LinkedIn */}
+  <Col
+    lg={2}
+    md={3}
+    sm={4}
+    xs={4}
+    className="text-end"
+  >
+    <a
+      href="https://www.linkedin.com/company/code-town-technologies/mycompany/?viewAsMember=true"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <img
+        src="/images/footer/1.png"
+        alt="linkedin"
+        className="footer-linkedin"
+      />
+    </a>
+  </Col>
+</Row>
         <div className="mt-5 pb-2">
           <Row>
             <Col className='responsive' lg={2} md={5} sm={12} xs={12}>
