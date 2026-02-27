@@ -13,7 +13,7 @@ const Header = () => {
             <Card.Title className='header-card-header'>
               <Typewriter
                 options={{
-                  strings: ['MOBILE APPLICATION', 'WEB APPLICATION', 'CLOUD APPLICATION', 'IOT APPLICATION'],
+                  strings: ['MOBILE APPLICATION', 'WEB APPLICATION', 'DIGITAL MARKETING SERVICES'],
                   autoStart: true,
                   delay: 100,
                   loop: true
@@ -25,7 +25,7 @@ const Header = () => {
             <div className='icon-scroll'></div>
           </Card.Footer>
           <Card.Text className='header-card-text'>
-            <span className='header-span'>MOBILE</span> <span className='header-span'>WEB</span> <span className='header-span'>SALESFORCE</span> <span className='header-span'>IOT</span>
+            <span className='header-span'>MOBILE</span> <span className='header-span'>WEB</span> <span className='header-span'>Digital Marketing</span>
           </Card.Text>
         </Container>
       </Card.ImgOverlay>

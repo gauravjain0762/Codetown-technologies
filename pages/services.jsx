@@ -29,7 +29,7 @@ const Services = () => {
                 Mobile Apps Development
               </Card.Title>
               <Card.Text className='services-page-text'>
-                From B2B or B2E apps for enterprises, small businesses, and startups, we have a proven track record of offering high-impact, result driven and engaging mobile application development services. IndiaNIC is a top mobile app development company that is renowned for delivering native Android app development, native iOS app development, hybrid and cross-platform app development services to build next-gen mobile applications using the latest technology stack.
+                From B2B or B2E apps for enterprises, small businesses, and startups, we have a proven track record of offering high-impact, result driven and engaging mobile application development services. Codetown Technologies is a top mobile app development company that is renowned for delivering native Android app development, native iOS app development, hybrid and cross-platform app development services to build next-gen mobile applications using the latest technology stack.
               </Card.Text>
               <Row>
                 <Col lg={2} xs={3} sm={3} md={4}>
@@ -67,39 +67,39 @@ const Services = () => {
                 <Col lg={6}>
                   <ul>
                     <li className='services-page-text-li'>
-                      Native iOS App Development.
-                    </li>
-                    <li className='services-page-text-li'>
-                      Cross-platform App Development
-                    </li>
-                    <li className='services-page-text-li'>
-                      Wearable App Development
-                    </li>
-                    <li className='services-page-text-li'>
-                      Xamarin App Development
-                    </li>
-                  </ul>
-                </Col>
-                <Col lg={6}>
-                  <ul>
-                    <li className='services-page-text-li'>
-                      Native AndroidApp Development
-                    </li>
-                    <li className='services-page-text-li'>
-                      Hybrid App Development
-                    </li>
-                    <li className='services-page-text-li'>
                       React Native App Development
                     </li>
                     <li className='services-page-text-li'>
                       Flutter App Development
                     </li>
+                    <li className='services-page-text-li'>
+                      Native Android App Development
+                    </li>
+                  </ul>
+                </Col>
+                <Col lg={6}>
+                  <ul>
+                     <li className='services-page-text-li'>
+                      Native IOS App Development
+                    </li>
+                    <li className='services-page-text-li'>
+                      Hybrid App Development
+                    </li>
+                    <li className='services-page-text-li'>
+                      Low Code No Code App Development
+                     </li>
+                    {/* <li className='services-page-text-li'>
+                      React Native App Development
+                    </li>
+                    <li className='services-page-text-li'>
+                      Flutter App Development
+                    </li>  */}
                   </ul>
                 </Col>
               </Row>
               <Col>
                 <CustomButton
-                  onClick={() => router.push('/portfolio')}
+                  onClick={() => router.push('/contact')}
                   title='LEARN MORE'
                   className='services-page-btn'
                 />
@@ -136,20 +136,44 @@ const Services = () => {
                 </Col>
                 <Col lg={2} xs={3} sm={3} md={4}>
                   <div className='services-page-image'>
-                    <img src='/images/service-page/technologies/n.png' alt='n' />
+                    <img src='/images/service-page/technologies/nextdotjs.svg'
+                     alt="next.js"
+                     className="w-11 h-11
+object-contain" />
                   </div>
+            
+
                 </Col>
                 <Col lg={2} xs={3} sm={3} md={4}>
-                  <div className='services-page-image'>
-                    <img src='/images/service-page/technologies/java.png' alt='java' />
-                  </div>
+                  <img src='/images/service-page/technologies/react.svg'
+                     alt="react.js"
+                     className="w-09 h-09
+object-contain" />
+                </Col>
+                 <Col lg={2} xs={3} sm={3} md={4}>
+                  <img src='/images/service-page/technologies/express.svg'
+                     alt="express.svg"
+                     className="w-09 h-09
+object-contain" />
+                </Col>
+                 <Col lg={2} xs={3} sm={3} md={4}>
+                  <img src='/images/service-page/technologies/vuedotjs.svg'
+                     alt="vuedot.svg"
+                     className="w-09 h-09
+object-contain" />
+                </Col>
+                 <Col lg={2} xs={3} sm={3} md={4}>
+                  <img src='/images/service-page/technologies/wix.svg'
+                     alt="wix.js"
+                     className="w-09 h-09
+object-contain" />
                 </Col>
                 <Col lg={2} xs={3} sm={3} md={4}>
                   <div className='services-page-image'>
                     <img src='/images/service-page/technologies/wordpress.png' alt='wordpress' />
                   </div>
                 </Col>
-                <Col lg={2} xs={3} sm={3} md={4}>
+                {/* <Col lg={2} xs={3} sm={3} md={4}>
                   <div className='services-page-image'>
                     <img src='/images/service-page/technologies/ic-technology.png' alt='ic' />
                   </div>
@@ -163,8 +187,8 @@ const Services = () => {
                   <div className='services-page-image'>
                     <img src='/images/service-page/technologies/ze.png' alt='ze' />
                   </div>
-                </Col>
-                <Col lg={2} xs={3} sm={3} md={4}>
+                </Col> */}
+                {/* <Col lg={2} xs={3} sm={3} md={4}>
                   <div className='services-page-image'>
                     <img src='/images/service-page/technologies/cake-php.png' alt='cake-php' />
                   </div>
@@ -183,7 +207,7 @@ const Services = () => {
                   <div className='services-page-image'>
                     <img src='/images/service-page/technologies/u.png' alt='u' />
                   </div>
-                </Col>
+                </Col> */}
                 <Col lg={2} xs={3} sm={3} md={4}>
                   <div className='services-page-image'>
                     <img src='/images/service-page/technologies/shopify.png' alt='shopify' />
@@ -246,7 +270,7 @@ const Services = () => {
               </Row>
               <Col>
                 <CustomButton
-                  onClick={() => router.push('/portfolio')}
+                  onClick={() => router.push('/contact')}
                   title='LEARN MORE'
                   className='services-page-btn'
                 />
@@ -334,7 +358,7 @@ const Services = () => {
               </Row>
               <Col>
                 <CustomButton
-                  onClick={() => router.push('/portfolio')}
+                  onClick={() => router.push('/contact')}
                   title='LEARN MORE'
                   className='services-page-btn'
                 />
@@ -358,61 +382,48 @@ const Services = () => {
           <Col md={6} lg={6} className='services-page-col'>
             <Card className='services-card-content'>
               <Card.Title className='services-header'>
-                IoT Solutions
+                Digital Marketing
               </Card.Title>
               <Card.Text className='services-page-text'>
-                Leveraging the power of Internet of Things (IoT), the network of “Connected Devices”, IndiaNIC is the best IoT service provider in developing innovative IoT solutions. Our IoT experts develop bespoke and innovative IoT solutions to simplify and automate complex business processes. Together we can create amazing wireless experiences with the modern IoT hardware to collect information. Hire the best IoT programmers from IndiaNIC who help startups and enterprises to build an IoT platform and connect it with other cloud, onsite applications or multiple IoT platforms.
+                We combine creativity, strategy, and data-driven insights to build impactful digital campaigns.
+Our goal is to increase your brand visibility, generate quality leads, and drive measurable growth.
+From social media to SEO, we deliver results that matter.
               </Card.Text>
               <Row>
                 <Col lg={6}>
                   <ul>
                     <li className='services-page-text-li'>
-                      Smart Home Automation
+                      SEO
                     </li>
                     <li className='services-page-text-li'>
-                      IoT Application Development
+                      Social Media Marketing
                     </li>
                     <li className='services-page-text-li'>
-                      APIs & Backend
-                    </li>
-                    <li className='services-page-text-li'>
-                      IoT System Integration
-                    </li>
-                    <li className='services-page-text-li'>
-                      IoT Solution Testing
+                      Content Marketing
                     </li>
                   </ul>
                 </Col>
                 <Col lg={6}>
                   <ul>
                     <li className='services-page-text-li'>
-                      Implementation and Support
+                      Paid Advertising
                     </li>
                     <li className='services-page-text-li'>
-                      Industrial IoT Automation
-                    </li>
-                    <li className='services-page-text-li'>
-                      iBeacon Solutions
-                    </li>
-                    <li className='services-page-text-li'>
-                      IoT Cloud Integration
-                    </li>
-                    <li className='services-page-text-li'>
-                      Industry-grade IoT Consultation
+                      Email Marketing
                     </li>
                   </ul>
                 </Col>
               </Row>
               <Col>
                 <CustomButton
-                  onClick={() => router.push('/portfolio')}
+                  onClick={() => router.push('/contact')}
                   title='LEARN MORE'
                   className='services-page-btn'
                 />
               </Col>
             </Card>
           </Col>
-          <Col md={6} lg={6} className='services-page-col'>
+          {/* <Col md={6} lg={6} className='services-page-col'>
             <Card className='services-card-content'>
               <Card.Title className='services-header'>
                 Wearables App Development
@@ -478,21 +489,14 @@ const Services = () => {
                 />
               </Col>
             </Card>
-          </Col>
-          <Col md={6} lg={6} className='services-page-col'>
+          </Col> */}
+          {/* <Col md={6} lg={6} className='services-page-col'>
             <Card className='services-card-image-5'>
               <Card.Body className='serices-body-part'>
                 <Image src='/images/service-page/service-5.png' fluid />
               </Card.Body>
             </Card>
-          </Col>
-          <Col md={6} lg={6} className='services-page-col'>
-            <Card className='services-card-image-6'>
-              <Card.Body className='serices-body-part'>
-                <Image src='/images/service-page/service-6.png' fluid />
-              </Card.Body>
-            </Card>
-          </Col>
+          </Col> */}
           <Col md={6} lg={6} className='services-page-col'>
             <Card className='services-card-content'>
               <Card.Title className='services-header'>
@@ -540,7 +544,7 @@ const Services = () => {
               </Row>
               <Col>
                 <CustomButton
-                  onClick={() => router.push('/portfolio')}
+                  onClick={() => router.push('/contact')}
                   title='LEARN MORE'
                   className='services-page-btn'
                 />
@@ -548,6 +552,13 @@ const Services = () => {
             </Card>
           </Col>
           <Col md={6} lg={6} className='services-page-col'>
+            <Card className='services-card-image-6'>
+              <Card.Body className='serices-body-part'>
+                <Image src='/images/service-page/service-6.png' fluid />
+              </Card.Body>
+            </Card>
+          </Col>
+          {/* <Col md={6} lg={6} className='services-page-col'>
             <Card className='services-card-content'>
               <Card.Title className='services-header'>
                 Quality Assurance (QA)
@@ -604,7 +615,7 @@ const Services = () => {
                 <Image src='/images/service-page/service-7.png' fluid />
               </Card.Body>
             </Card>
-          </Col>
+          </Col> */}
           <Col md={6} lg={6} className='services-page-col'>
             <Card className='services-card-image-8'>
               <Card.Body className='serices-body-part'>
@@ -650,14 +661,14 @@ const Services = () => {
               </Row>
               <Col>
                 <CustomButton
-                  onClick={() => router.push('/dedicatedDeveloper')}
+                  onClick={() => router.push('/contact')}
                   title='LEARN MORE'
                   className='services-page-btn'
                 />
               </Col>
             </Card>
           </Col>
-          <Col md={6} lg={6} className='services-page-col'>
+          {/* <Col md={6} lg={6} className='services-page-col'>
             <Card className='services-card-content'>
               <Card.Title className='services-header'>
                 Virtual Reality Apps Development
@@ -800,7 +811,7 @@ const Services = () => {
                 />
               </Col>
             </Card>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </React.Fragment>

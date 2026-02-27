@@ -1479,7 +1479,7 @@ a {
 }
 
 .portfolio-technology-tab {
-  border-bottom: 2px solid $color-primary  !important;
+  border-bottom: 2px solid transparent;
   color: $color-black  !important;
   cursor: pointer !important;
   font-weight: 550 !important;
@@ -1491,6 +1491,10 @@ a {
   cursor: pointer !important;
   font-weight: 550 !important;
   font-size: 16px !important;
+}
+
+.nav-tabs .nav-link.active.portfolio-technology-tab {
+  border-bottom: 3px solid $color-primary !important;
 }
 
 .portfolio-nav-items {

@@ -40,7 +40,9 @@ const PortFolio = () => {
         />
       </div>
       <Container>
-        <Tab.Container onSelect={handleSelect} id="noanim-tab-example" defaultActiveKey={key}>
+        <Tab.Container 
+        activeKey={key}
+        onSelect={(k) => setKey(Number(k))} id="noanim-tab-example" >
           <Row>
             <Col md={12} className='portfolio-tab-container'>
               <Row>
@@ -49,7 +51,11 @@ const PortFolio = () => {
                     {PortfolioTabs && PortfolioTabs.map((tech, index) => {
                       return (
                         <Nav.Item key={`portfolionavTab${index}`}>
-                          <Nav.Link className={key == tech.id ? 'portfolio-technology-tab nav-tabs' : 'portfolio-technology-tab-1 nav-tabs'} eventKey={tech.id}>{tech.name}</Nav.Link>
+                          <Nav.Link 
+                          eventKey={tech.id} 
+                          className='portfolio-technology-tab'
+                          > {tech.name}
+                           </Nav.Link>
                         </Nav.Item>
                       );
                     })}
