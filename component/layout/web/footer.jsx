@@ -37,7 +37,7 @@ const Footer = () => {
           <Link href="/portfolio" passHref>
             <Nav.Link href="/portfolio" className={router.pathname == '/portfolio' ? 'footer-nav-link-active' : 'footer-nav-link'}>Portfolios</Nav.Link>
           </Link>
-          <Link href="/team" passHref>
+          {/* <Link href="/team" passHref>
             <Nav.Link href="/team" className={router.pathname == '/team' ? 'footer-nav-link-active' : 'footer-nav-link'}>Our Team</Nav.Link>
           </Link>
           <Link href="/dedicatedDeveloper" passHref>
@@ -45,7 +45,7 @@ const Footer = () => {
           </Link>
           <Link href="/github" passHref>
             <Nav.Link href="/github" className={router.pathname == '/github' ? 'footer-nav-link-active' : 'footer-nav-link'}>Github</Nav.Link>
-          </Link>
+          </Link> */}
           {/* <Link href="/technology" passHref>
             <Nav.Link className='footer-nav-link'>Technology</Nav.Link>
           </Link>

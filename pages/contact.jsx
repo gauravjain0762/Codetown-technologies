@@ -108,7 +108,9 @@ const Contact = () => {
       <div className='contact-position'>
         <PageHeader
           title='Connect with us'
-          subtitle='Get in touch with our experts today.'
+          subtitle= { <span style={{ textTransform: "none "}}> Get In Touch With Our Experts Today. Reach us at {" "}
+          <a href="tel:+917568547177" style={{color: "#fff", fontWeight: "500"}}>
+            +91 75685 47177 </a>  </span> }
           bgImage='/images/contact/background.png'
           classNames='contact-header-image'
         />
