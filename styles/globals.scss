@@ -1368,9 +1368,30 @@ a {
 }
 
 .contact-position-form {
-  position: absolute !important;
-  top: 22% !important;
-  width: 550px !important;
+  position: relative !important;
+  width: 100%;
+  max-width: 550px;
+  margin-top: -120px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Style for input + select */
+.contact-position-form input,
+.contact-position-form textarea,
+.contact-position-form .form-select {
+  border-radius: 8px !important;
+  border: 1px solid #E3E3E3 !important;
+  padding: 10px 14px !important;
+  font-size: 14px !important;
+  height: 45px !important;
+}
+
+/* Textarea height */
+.contact-position-form textarea {
+  height: 100px !important;
+  resize: none !important;
 }
 
 .contact-header-image {

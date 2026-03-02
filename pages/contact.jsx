@@ -15,14 +15,10 @@ import { ContactData } from '../component/data/contactdata';
 import SelectBox from '../component/formik/selectbox';
 
 const ValidationSchema = Yup.object().shape({
-  first_name: Yup.string()
+  full_name: Yup.string()
     .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('First name is required'),
-  last_name: Yup.string()
-    .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('Last name is required'),
+    .max(100, 'Too Long!')
+    .required('Full name is required'),
   email: Yup.string().email('Invalid email').required('Email is required'),
   phone: Yup.string().required('Phone number is required'),
 });
@@ -30,8 +26,7 @@ const ValidationSchema = Yup.object().shape({
 const Contact = () => {
   const formik = useFormik({
     initialValues: {
-      first_name: '',
-      last_name: '',
+      full_name: '',
       email: '',
       company: '',
       phone: '',
@@ -58,33 +53,17 @@ const Contact = () => {
       name: 'UI/UX Design',
     },
     {
-      id: 'Wearables App Development',
-      name: 'Wearables App Development',
-    },
-    {
-      id: 'IoT Solutions',
-      name: 'IoT Solutions',
-    },
-    {
-      id: 'Cloud Solutions',
-      name: 'Cloud Solutions',
+      id: 'Digital Marketing',
+      name: 'Digital Marketing',
     },
     {
       id: 'AI - ML App Development',
       name: 'AI - ML App Development',
     },
     {
-      id: 'Quality Assurance (QA)',
-      name: 'Quality Assurance (QA)',
-    },
-    {
       id: 'Hire Dedicated Developers',
       name: 'Hire Dedicated Developers',
     },
-    {
-      id: 'Virtual Reality Apps Development',
-      name: 'Virtual Reality Apps Development',
-    }
   ];
   const StartOption = [
     {
@@ -120,86 +99,85 @@ const Contact = () => {
               <div className='contact-background-color contact-position-form'>
                 <Card style={{ backgroundColor: 'transparent', border: '0px' }}>
                   <Form onSubmit={formik.handleSubmit}>
-                    <Row>
-                      <Col lg={12}>
-                        <Form.Label className='contact-form-label'>
-                          Name
-                        </Form.Label>
-                      </Col>
-                      <Col lg={6}>
-                        <TextBox
-                          placeholder='First Name*'
-                          name="first_name"
-                          label={false}
-                          value={formik.values.first_name}
-                          handleChange={formik.handleChange}
-                          error={formik.touched.first_name && formik.errors.first_name}
-                        />
-                      </Col>
-                      <Col lg={6}>
-                        <TextBox
-                          placeholder='Last Name*'
-                          name="last_name"
-                          label={false}
-                          value={formik.values.last_name}
-                          handleChange={formik.handleChange}
-                          error={formik.touched.last_name && formik.errors.last_name}
-                        />
-                      </Col>
-                      <Col lg={6}>
-                        <TextBox
-                          className='contact-form-label'
-                          placeholder='Your Email Address'
-                          name="email"
-                          label="Email"
-                          value={formik.values.email}
-                          handleChange={formik.handleChange}
-                          error={formik.touched.email && formik.errors.email}
-                        />
-                      </Col>
-                      <Col lg={6}>
-                        <TextBox
-                          className='contact-form-label'
-                          placeholder='Phone Number'
-                          name="phone"
-                          type='text'
-                          label="Phone Number"
-                          value={formik.values.phone}
-                          handleChange={(e) => {
-                            const value = e.target.value.replace(/\D/g, '');
-                            formik.setFieldValue('phone', value);
-                          }}
-                          error={formik.touched.phone && formik.errors.phone}
-                        />
-                      </Col>
-                      <Col lg={12}>
-                        <SelectBox
-                          option={ServiceOptions}
-                          className='contact-form-label'
-                          label="Select a Service"
-                        />
-                      </Col>
-                      <Col lg={12}>
-                        <SelectBox
-                          option={StartOption}
-                          className='contact-form-label'
-                          name="company"
-                          label="How soon you want to start?"
-                        />
-                      </Col>
-                      <Col lg={12}>
-                        <TextBox
-                          className='contact-form-label'
-                          name="description"
-                          label="Brief about the project"
-                          value={formik.values.description}
-                          handleChange={formik.handleChange}
-                          as="textarea"
-                          rows={3}
-                          error={formik.touched.description && formik.errors.description}
-                        />
-                      </Col>
-                    </Row>
+                    <Row className="contact-form-row">
+
+  {/* Full Name */}
+  <Col xs={12}>
+    <TextBox
+      className='contact-form-label'
+      placeholder='Full Name*'
+      name="full_name"
+      label="Full Name"
+      value={formik.values.full_name}
+      handleChange={formik.handleChange}
+      error={formik.touched.full_name && formik.errors.full_name}
+    />
+  </Col>
+
+  {/* Email */}
+  <Col xs={12}>
+    <TextBox
+      className='contact-form-label'
+      placeholder='Your Email Address'
+      name="email"
+      label="Email"
+      value={formik.values.email}
+      handleChange={formik.handleChange}
+      error={formik.touched.email && formik.errors.email}
+    />
+  </Col>
+
+  {/* Phone */}
+  <Col xs={12}>
+    <TextBox
+      className='contact-form-label'
+      placeholder='Phone Number'
+      name="phone"
+      type='text'
+      label="Phone Number"
+      value={formik.values.phone}
+      handleChange={(e) => {
+        const value = e.target.value.replace(/\D/g, '');
+        formik.setFieldValue('phone', value);
+      }}
+      error={formik.touched.phone && formik.errors.phone}
+    />
+  </Col>
+
+  {/* Select Service */}
+  <Col xs={12}>
+    <SelectBox
+      option={ServiceOptions}
+      className='contact-form-label'
+      label="Select a Service"
+    />
+  </Col>
+
+  {/* Start Option */}
+  <Col xs={12}>
+    <SelectBox
+      option={StartOption}
+      className='contact-form-label'
+      name="company"
+      label="How soon you want to start?"
+    />
+  </Col>
+
+  {/* Description */}
+  <Col xs={12}>
+    <TextBox
+      className='contact-form-label'
+      name="description"
+      label="Brief about the project"
+      value={formik.values.description}
+      handleChange={formik.handleChange}
+      as="textarea"
+      rows={3}
+      error={formik.touched.description && formik.errors.description}
+    />
+  </Col>
+
+</Row>
                     <SubmitButton
                       title='GET STARTED'
                       variant='primary'

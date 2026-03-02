@@ -32,6 +32,8 @@ const Footer = () => {
   >
     <Link href="/about" passHref>
       <Nav.Link
+      as={Link}
+      href='/about'
         className={
           router.pathname == "/about"
             ? "footer-nav-link-active"
@@ -44,6 +46,8 @@ const Footer = () => {
 
     <Link href="/services" passHref>
       <Nav.Link
+      as={Link}
+      href='/services'
         className={
           router.pathname == "/services"
             ? "footer-nav-link-active"
@@ -56,6 +60,8 @@ const Footer = () => {
 
     <Link href="/portfolio" passHref>
       <Nav.Link
+      as={Link}
+      href='/portfolio'
         className={
           router.pathname == "/portfolio"
             ? "footer-nav-link-active"

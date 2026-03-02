@@ -72,7 +72,10 @@ const Header = () => {
                     <Nav.Link as={Link} href="/portfolio" onClick={handleClose} className={router.pathname == '/portfolio' ? 'header-nav-link-active' : 'header-nav-link'}>Portfolios</Nav.Link>
                   </Link>
                   <Link href="/contact" passHref>
-                    <Nav.Link as={Link} href="/contact" onClick={handleClose} className={router.pathname == '/contact' ? 'header-nav-link-contact-1' : router.pathname == '/portfolio' ? 'header-nav-link-contact-1' : router.pathname == '/services' ? 'header-nav-link-contact-1' : 'header-nav-link-contact'}>Contact Us</Nav.Link>
+                    <Nav.Link as={Link} href="/contact" onClick={handleClose} 
+                    className={router.pathname == '/contact' ? 'header-nav-link-contact-1' : router.pathname == '/portfolio' ?
+                     'header-nav-link-contact-1' : router.pathname == '/services' ? 
+                     'header-nav-link-contact-1' : 'header-nav-link-contact'}>Contact Us</Nav.Link>
                   </Link>
                 </Nav>
               </Offcanvas.Body>
