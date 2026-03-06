@@ -5,15 +5,15 @@ import Typewriter from 'typewriter-effect';
 const Header = () => {
   return (
     <Card className="header-card">
-      <Card.Img width={100} height={520} src="/images/header/headd.png" alt="Card image" />
+      <Card.Img width={100} height={520} src="/images/header/What.jpeg" alt="Card image" />
       <Card.ImgOverlay className="header-card-1">
         <Container>
           <div className="header-card-content">
-            <Card.Title className='header-card-header'>WE DELIVER</Card.Title>
+            {/* <Card.Title className='header-card-header'>WE DELIVER</Card.Title> */}
             <Card.Title className='header-card-header'>
               <Typewriter
                 options={{
-                  strings: ['MOBILE APPLICATION', 'WEB APPLICATION', 'DIGITAL MARKETING SERVICES'],
+                  // strings: ['MOBILE APPLICATION', 'WEB APPLICATION', 'DIGITAL MARKETING SERVICES'],
                   autoStart: true,
                   delay: 100,
                   loop: true
