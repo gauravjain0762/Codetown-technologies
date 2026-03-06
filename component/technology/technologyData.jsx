@@ -89,6 +89,16 @@ export const TechnologyData = [
         image: '/images/technologies/ic-technology-angular-js.svg',
         title: 'Angular .JS',
       },
+      {
+        id: 7,
+        image: '/images/technologies/ic-technology-wordpress.svg',
+        title: 'Wordpress',
+      },
+      {
+        id: 2,
+        image: '/images/service-page/technologies/wix.svg',
+        title: 'Wix',
+      }
     ]
   },
   {
@@ -185,38 +195,38 @@ export const TechnologyData = [
   },
   {
     id: 5,
-    name: 'CMS',
+    name: 'Digital Marketing',
     image: [
-      // {
-      //   id: 1,
-      //   image: '/images/technologies/ic-technology-drupal.svg',
-      //   title: 'Drupal',
-      // },
-      // {
-      //   id: 2,
-      //   image: '/images/technologies/ic-technology-joomla.svg',
-      //   title: 'Joomla',
-      // },
       {
         id: 1,
-        image: '/images/technologies/ic-technology-wordpress.svg',
-        title: 'Wordpress',
+        image: '/images/service-page/technologies/googleads.svg',
+        title: 'Google Ads',
       },
-      // {
-      //   id: 4,
-      //   image: '/images/technologies/ic-technology-magento.svg',
-      //   title: 'Magento',
-      // },
-      // {
-      //   id: 5,
-      //   image: '/images/technologies/ic-technology-shopify-plus.svg',
-      //   title: 'Shopify',
-      // },
       {
         id: 2,
-        image: '/images/service-page/technologies/wix.svg',
-        title: 'Wix',
-      }
+        image: '/images/service-page/technologies/facebook.svg',
+        title: 'Facebook',
+      },
+      {
+        id: 3,
+        image: '/images/service-page/technologies/instagram.svg',
+        title: 'Instagram',
+      },
+      {
+        id: 4,
+        image: '/images/service-page/technologies/search.png',
+        title: 'SEO',
+      },
+      {
+        id: 5,
+        image: '/images/service-page/technologies/gmail.svg',
+        title: 'Mail Marketing',
+      },
+      {
+        id: 6,
+        image: '/images/service-page/technologies/hubspot.svg',
+        title: 'Hubspot',
+      },
     ]
   },
   {
