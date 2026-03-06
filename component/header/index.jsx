@@ -5,7 +5,7 @@ import Typewriter from 'typewriter-effect';
 const Header = () => {
   return (
     <Card className="header-card">
-      <Card.Img width={100} height={520} src="/images/header/What.jpeg" alt="Card image" />
+      <Card.Img width={100} height={520} src="/images/header/headernew.jpeg" alt="Card image" />
       <Card.ImgOverlay className="header-card-1">
         <Container>
           <div className="header-card-content">
