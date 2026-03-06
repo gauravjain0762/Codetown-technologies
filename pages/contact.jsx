@@ -195,7 +195,7 @@ const Contact = () => {
                   </Card.Body>
                 </Card>
                 <div>
-                  <Swiper
+                  {/* <Swiper
                     modules={[FreeMode, Pagination, Autoplay]}
                     freeMode={true}
                     autoplay={{
@@ -247,7 +247,7 @@ const Contact = () => {
                         </SwiperSlide>
                       );
                     })}
-                  </Swiper>
+                  </Swiper> */}
                 </div>
               </Container>
             </Col>

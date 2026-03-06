@@ -10,7 +10,7 @@ export const serviceData = [
   {
     id: 2,
     title: 'Web Development',
-    description: 'Our web developers create custom web and web application solutions. We deliver web presence to help you grow your business using the best web technologies.',
+    description: 'Our Web developers create custom web and web application solutions. we deliver web presence to help you grow your business using the best technologies.',
     img: '/images/services/Page-2.png',
     link: '#',
     color: '#BFC5FF'
@@ -27,8 +27,8 @@ export const serviceData = [
   },
   {
     id: 4,
-    title: 'IoT',
-    description: 'Hire IoT programmers who develop bespoke and innovative IoT solutions to simplify and automate complex business processes to save overall operational cost.',
+    title: 'Digital Marketing',
+    description: 'We deliver result-driven digital marketing solutions including SEO, social media marketing, paid advertising, and content marketing to help businesses increase visibility, attract the right audience, and grow faster online.',
     img: '/images/services/Group.png',
     link: '#',
     color: '#FFE3E9'

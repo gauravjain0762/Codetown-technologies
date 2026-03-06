@@ -100,7 +100,7 @@ const Footer = () => {
               <Image src='/images/Logo.png' width={140} alt='logo' />
             </Col>
             <Col className='responsive' lg={5} md={5} sm={12} xs={12}>
-              <span className='footer-span'>2022-2023 ©codetowntechnologies - All Rights Reserved</span>
+              {/* <span className='footer-span'>2022-2023 ©codetowntechnologies - All Rights Reserved</span> */}
             </Col>
             <Col className='responsive' lg={5} md={5} sm={12} xs={12}>
               <div className='footer-detail'>

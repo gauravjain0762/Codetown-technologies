@@ -385,6 +385,38 @@ Our goal is to increase your brand visibility, generate quality leads, and drive
 From social media to SEO, we deliver results that matter.
               </Card.Text>
               <Row>
+                <Col lg={2} xs={3} sm={3} md={4}>
+                  <div className='services-page-image'>
+                    <img src='/images/service-page/technologies/googleads.svg' alt='google ads' width="50" height="50"/>
+                  </div>
+                </Col>
+                <Col lg={2} xs={3} sm={3} md={4}>
+                  <div className='services-page-image'>
+                    <img src='/images/service-page/technologies/hubspot.svg' alt='hubspot' width="50" height="50"/>
+                  </div>
+                </Col>
+                <Col lg={2} xs={3} sm={3} md={4}>
+                  <div className='services-page-image'>
+                    <img src='/images/service-page/technologies/instagram.svg' alt='instagram' width="50" height="50"/>
+                  </div>
+                </Col>
+                <Col lg={2} xs={3} sm={3} md={4}>
+                  <div className='services-page-image'>
+                    <img src='/images/service-page/technologies/facebook.svg' alt='facebook' width="50" height="50"/>
+                  </div>
+                </Col>
+                <Col lg={2} xs={3} sm={3} md={4}>
+                  <div className='services-page-image'>
+                    <img src='/images/service-page/technologies/search.png' alt='search' width="50" height="50"/>
+                  </div>
+                </Col>
+                <Col lg={2} xs={3} sm={3} md={4}>
+                  <div className='services-page-image'>
+                    <img src='/images/service-page/technologies/gmail.svg' alt='gmail' width="50" height="50"/>
+                  </div>
+                </Col>
+              </Row>
+              <Row>
                 <Col lg={6}>
                   <ul>
                     <li className='services-page-text-li'>
@@ -500,6 +532,38 @@ From social media to SEO, we deliver results that matter.
               <Card.Text className='services-page-text'>
                 Looking to add intelligence to your existing business application or want to develop a new one? You are in the right place. Our AI-ML engineers will help you do that. We build AI-ML solutions that will save upto 30% cost on your overall business operations. We have expertise in working with tools, frameworks and technologies like TensorFlow, Apache SystemML, Caffe, Apache Mahout, OpenNN, Torch, Neuroph, Mycroft AI, etc. to foster business intelligence to diverse industry verticals.
               </Card.Text>
+              <Row>
+                <Col lg={2} xs={3} sm={3} md={4}>
+                  <div className='services-page-image'>
+                    <img src='/images/service-page/technologies/chatbot.svg' alt='chatbot' width="50" height="50"/>
+                  </div>
+                </Col>
+                <Col lg={2} xs={3} sm={3} md={4}>
+                  <div className='services-page-image'>
+                    <img src='/images/service-page/technologies/keras.svg' alt='keras' width="50" height="50"/>
+                  </div>
+                </Col>
+                <Col lg={2} xs={3} sm={3} md={4}>
+                  <div className='services-page-image'>
+                    <img src='/images/service-page/technologies/pandas.svg' alt='pandas' width="50" height="50"/>
+                  </div>
+                </Col>
+                <Col lg={2} xs={3} sm={3} md={4}>
+                  <div className='services-page-image'>
+                    <img src='/images/service-page/technologies/python.svg' alt='python' width="50" height="50"/>
+                  </div>
+                </Col>
+                <Col lg={2} xs={3} sm={3} md={4}>
+                  <div className='services-page-image'>
+                    <img src='/images/service-page/technologies/scikitlearn.svg' alt='scikitlearn' width="50" height="50"/>
+                  </div>
+                </Col>
+                <Col lg={2} xs={3} sm={3} md={4}>
+                  <div className='services-page-image'>
+                    <img src='/images/service-page/technologies/gmail.svg' alt='gmail' width="50" height="50"/>
+                  </div>
+                </Col>
+              </Row>
               <Row>
                 <Col lg={6}>
                   <ul>

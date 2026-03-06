@@ -83,6 +83,11 @@ export const TechnologyData = [
         id: 5,
         image: '/images/technologies/ic-technology-html5.svg',
         title: 'HTML 5',
+      },
+      {
+        id: 6,
+        image: '/images/service-page/technologies/nextdotjs.svg',
+        title: 'Next.JS',
       }
     ]
   },
@@ -170,7 +175,12 @@ export const TechnologyData = [
         id: 6,
         image: '/images/technologies/python.png',
         title: 'Python',
-      }
+      },
+      {
+        id: 7,
+        image: '/images/service-page/technologies/express.svg',
+        title: 'Express',
+      },
     ]
   },
   {
@@ -201,6 +211,11 @@ export const TechnologyData = [
         id: 5,
         image: '/images/technologies/ic-technology-shopify-plus.svg',
         title: 'Shopify',
+      },
+      {
+        id: 6,
+        image: '/images/service-page/technologies/wix.svg',
+        title: 'Wix',
       }
     ]
   },
