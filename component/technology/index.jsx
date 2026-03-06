@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, Col, Container, Nav, Row, Tab, Tabs } from 'react-bootstrap';
 import { TechnologyData } from './technologyData';
 const Technology = () => {
@@ -16,14 +16,19 @@ const Technology = () => {
           <Card.Title className='h1'>
             Technologies we work with
           </Card.Title>
-          <Tab.Container onSelect={handleSelect} id="noanim-tab-example" defaultActiveKey={key}>
+          <Tab.Container activeKey={key} onSelect={handleSelect} id="noanim-tab-example">
             <Row>
               <Col md={12}>
-                <Nav className='justify-content-center border-0 nav-tabs' variant="tabs">
+                <Nav className='justify-content-center tech-nav-tabs' variant="tabs">
                   {TechnologyData && TechnologyData.map((tech, index) => {
                     return (
                       <Nav.Item key={`navTab${index}`}>
-                        <Nav.Link className={key == tech.id ? 'technology-tab nav-tabs' : 'technology-tab-1 nav-tabs'} eventKey={tech.id}>{tech.name}</Nav.Link>
+                        <Nav.Link
+  eventKey={tech.id}
+  className="tech-nav-item"
+>
+  {tech.name}
+</Nav.Link>
                       </Nav.Item>
                     );
                   })}

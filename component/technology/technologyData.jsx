@@ -23,36 +23,36 @@ export const TechnologyData = [
         image: '/images/technologies/flutter.png',
         title: 'Flutter',
       },
+      // {
+      //   id: 5,
+      //   image: '/images/technologies/ionic.png',
+      //   title: 'Ionic',
+      // },
       {
         id: 5,
-        image: '/images/technologies/ionic.png',
-        title: 'Ionic',
-      },
-      {
-        id: 6,
         image: '/images/technologies/swift.png',
         title: 'Swift',
       },
       {
-        id: 7,
+        id: 6,
         image: '/images/technologies/kotlin.png',
         title: 'Kotlin',
       },
-      {
-        id: 8,
-        image: '/images/technologies/titanium.png',
-        title: 'Titanium',
-      },
-      {
-        id: 9,
-        image: '/images/technologies/xamarin.png',
-        title: 'Xamarin',
-      },
-      {
-        id: 10,
-        image: '/images/technologies/xamarin-1.png',
-        title: 'Xamarin',
-      }
+      // {
+      //   id: 8,
+      //   image: '/images/technologies/titanium.png',
+      //   title: 'Titanium',
+      // },
+      // {
+      //   id: 9,
+      //   image: '/images/technologies/xamarin.png',
+      //   title: 'Xamarin',
+      // },
+      // {
+      //   id: 7,
+      //   image: '/images/technologies/xamarin-1.png',
+      //   title: 'Xamarin',
+      // }
     ]
   },
   {
@@ -61,34 +61,34 @@ export const TechnologyData = [
     image: [
       {
         id: 1,
-        image: '/images/technologies/ic-technology-angular-js.svg',
-        title: 'Angular .JS',
-      },
-      {
-        id: 2,
         image: '/images/technologies/react.png',
         title: 'React Js',
       },
       {
-        id: 3,
+        id: 2,
         image: '/images/technologies/ts.png',
         title: 'TypeScript',
       },
       {
-        id: 4,
+        id: 3,
         image: '/images/technologies/vue.png',
         title: 'Vue',
       },
       {
-        id: 5,
+        id: 4,
         image: '/images/technologies/ic-technology-html5.svg',
         title: 'HTML 5',
       },
       {
-        id: 6,
+        id: 5,
         image: '/images/service-page/technologies/nextdotjs.svg',
         title: 'Next.JS',
-      }
+      },
+       {
+        id: 6,
+        image: '/images/technologies/ic-technology-angular-js.svg',
+        title: 'Angular .JS',
+      },
     ]
   },
   {
@@ -156,28 +156,28 @@ export const TechnologyData = [
         image: '/images/technologies/ic-technology-java.svg',
         title: 'java',
       },
+      // {
+      //   id: 3,
+      //   image: '/images/technologies/ic-technology-microsoft-dot-net1x.svg',
+      //   title: '.NET',
+      // },
       {
         id: 3,
-        image: '/images/technologies/ic-technology-microsoft-dot-net1x.svg',
-        title: '.NET',
-      },
-      {
-        id: 4,
         image: '/images/technologies/ic-technology-node-js.svg',
         title: 'Node .JS',
       },
+      // {
+      //   id: 5,
+      //   image: '/images/technologies/rails.png',
+      //   title: 'Rails',
+      // },
       {
-        id: 5,
-        image: '/images/technologies/rails.png',
-        title: 'Rails',
-      },
-      {
-        id: 6,
+        id: 4,
         image: '/images/technologies/python.png',
         title: 'Python',
       },
       {
-        id: 7,
+        id: 5,
         image: '/images/service-page/technologies/express.svg',
         title: 'Express',
       },
@@ -187,33 +187,33 @@ export const TechnologyData = [
     id: 5,
     name: 'CMS',
     image: [
+      // {
+      //   id: 1,
+      //   image: '/images/technologies/ic-technology-drupal.svg',
+      //   title: 'Drupal',
+      // },
+      // {
+      //   id: 2,
+      //   image: '/images/technologies/ic-technology-joomla.svg',
+      //   title: 'Joomla',
+      // },
       {
         id: 1,
-        image: '/images/technologies/ic-technology-drupal.svg',
-        title: 'Drupal',
-      },
-      {
-        id: 2,
-        image: '/images/technologies/ic-technology-joomla.svg',
-        title: 'Joomla',
-      },
-      {
-        id: 3,
         image: '/images/technologies/ic-technology-wordpress.svg',
         title: 'Wordpress',
       },
+      // {
+      //   id: 4,
+      //   image: '/images/technologies/ic-technology-magento.svg',
+      //   title: 'Magento',
+      // },
+      // {
+      //   id: 5,
+      //   image: '/images/technologies/ic-technology-shopify-plus.svg',
+      //   title: 'Shopify',
+      // },
       {
-        id: 4,
-        image: '/images/technologies/ic-technology-magento.svg',
-        title: 'Magento',
-      },
-      {
-        id: 5,
-        image: '/images/technologies/ic-technology-shopify-plus.svg',
-        title: 'Shopify',
-      },
-      {
-        id: 6,
+        id: 2,
         image: '/images/service-page/technologies/wix.svg',
         title: 'Wix',
       }
@@ -237,6 +237,31 @@ export const TechnologyData = [
         id: 3,
         image: '/images/technologies/jenkins.png',
         title: 'Jenkins',
+      },
+      {
+        id: 4,
+        image: '/images/technologies/docker.svg',
+        title: 'Docker',
+      },
+      {
+        id: 5,
+        image: '/images/technologies/githubactions.svg',
+        title: 'Github Actions',
+      },
+      {
+        id: 6,
+        image: '/images/technologies/kubernetes.svg',
+        title: 'Kubernetes',
+      },
+      {
+        id: 7,
+        image: '/images/technologies/terraform.svg',
+        title: 'Terraform',
+      },
+      {
+        id: 8,
+        image: '/images/technologies/digitalocean.svg',
+        title: 'Digital Ocean',
       }
     ]
   }
