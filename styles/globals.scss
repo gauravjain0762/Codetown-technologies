@@ -3307,3 +3307,111 @@ li {
   height:3px;
   background:#ff3b1f;
 }
+
+.portfolio-img{
+  cursor:pointer;
+  transition:transform 0.3s ease;
+}
+
+.portfolio-img:hover{
+  transform:scale(1.03);
+}
+
+.modal-header .btn-close {
+  opacity: 1 !important;
+}
+
+.modal-header .btn-close:focus {
+  box-shadow: none;
+}
+.modal-header .btn-close {
+  filter: invert(1);
+}
+.modal-content {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.modal-backdrop.show {
+  opacity: 0.7;
+}
+
+.lightbox-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+.lightbox-container{
+  position:relative;
+  display:inline-block;
+}
+
+/* image */
+
+.lightbox-image{
+  max-width:75vw;
+  max-height:80vh;
+  border-radius:12px;
+  box-shadow:0 30px 90px rgba(0,0,0,0.6);
+}
+
+/* Close button */
+
+.lightbox-close{
+  position:absolute;
+  top:-12px;
+  right:-12px;
+  background:white;
+  color:black;
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+/* arrows */
+
+.lightbox-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:40px;
+  color:white;
+  cursor:pointer;
+  padding:10px;
+  background:rgba(0,0,0,0.4);
+  border-radius:8px;
+}
+
+.lightbox-arrow.left{
+  left:-50px;
+}
+
+.lightbox-arrow.right{
+  right:-50px;
+}
+
+.lightbox-arrow:hover{
+  transform:translateY(-50%) scale(1.15);
+}
+
+.lightbox-close:hover{
+  transform:scale(1.1);
+}
+
+/* Animation */
+@keyframes fadeIn{
+  from{opacity:0}
+  to{opacity:1}
+}

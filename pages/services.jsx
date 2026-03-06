@@ -15,8 +15,8 @@ const Services = () => {
       </Head>
       <div className='contact-position'>
         <PageHeader
-          title='Web and Mobile Software Development Services'
-          subtitle='A successful offshare software application development company since 2020, providing a full range of website and mobile app development, games development, IoT, AR-VR and other IT Services and solutions globally.'
+          title='Web, Mobile & Digital Marketing Solutions'
+          subtitle='A successful offshore software application development company since 2020, providing a full range of web development, mobile app development, digital marketing, AI & ML application development, UI/UX design and other IT services and solutions globally.'
           bgImage='/images/team/team-banner.png'
           classNames='services-text'
         />

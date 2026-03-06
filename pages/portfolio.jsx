@@ -11,6 +11,11 @@ const PortFolio = () => {
   const [modalShow, setModalShow] = React.useState(false);
   const [show, setShow] = React.useState(false);
 
+const [selectedImage, setSelectedImage] = React.useState("");
+const [imagePopup, setImagePopup] = React.useState(false);
+const [currentIndex, setCurrentIndex] = React.useState(0);
+const [images, setImages] = React.useState([]);
+
   const handleClose = () => {
     setShow(false);
   }
@@ -25,6 +30,24 @@ const PortFolio = () => {
   const handleSelect = (eventKey) => {
     setKey(eventKey);
   };
+
+ const openImagePopup = (index, projectImages) => {
+  setImages(projectImages);
+  setCurrentIndex(index);
+  setImagePopup(true);
+};
+
+const nextImage = () => {
+  setCurrentIndex((prev) =>
+    prev === images.length - 1 ? 0 : prev + 1
+  );
+};
+
+const prevImage = () => {
+  setCurrentIndex((prev) =>
+    prev === 0 ? images.length - 1 : prev - 1
+  );
+};
 
   return (
     <React.Fragment>
@@ -82,7 +105,18 @@ const PortFolio = () => {
                               <>
                                 <Col xxl={3} lg={4} md={6} sm={12} xs={12} key={`portfolio${index}`}>
                                   <Card className='portfolio-card'>
-                                    <Card.Img className='portfolio-img' variant="top" src={item.image} />
+                                    <Card.Img
+  className="portfolio-img"
+  variant="top"
+  src={item.image}
+  style={{ cursor: "pointer" }}
+  onClick={() =>
+    openImagePopup(
+      index,
+      tech.Details.map((p) => p.image)
+    )
+  }
+/>
                                     <Card.Body className='portfolio-card-body'>
                                       <Card.Text className='portfolio-card-subheading'>
                                         {item.subheading}
@@ -247,6 +281,45 @@ const PortFolio = () => {
           IF YOU LIKE WHAT YOU SEE, SHOW SOME LOVE
         </Card.Text>
       </ModelBox>
+      {imagePopup && (
+  <div className="lightbox-overlay">
+
+    {/* Image */}
+    <div className="lightbox-container">
+
+  <span
+    className="lightbox-close"
+    onClick={() => setImagePopup(false)}
+  >
+    ×
+  </span>
+
+  <span
+    className="lightbox-arrow left"
+    onClick={prevImage}
+  >
+    ‹
+  </span>
+
+  <img
+    src={images[currentIndex]}
+    className="lightbox-image"
+    draggable="false"
+  />
+
+  <span
+    className="lightbox-arrow right"
+    onClick={nextImage}
+  >
+    ›
+  </span>
+
+</div>
+
+    {/* Right Arrow */}
+
+  </div>
+)}
     </React.Fragment>
   );
 };
