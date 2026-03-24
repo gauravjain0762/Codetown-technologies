@@ -1,29 +1,19 @@
-import Head from 'next/head';
-import React from 'react';
-import Contact from '../component/contact';
-import Header from '../component/header';
-import withWebLayout from '../component/layout/web/withWebLayout';
-import Process from '../component/process';
-import Services from '../component/services';
-import Technologies from '../component/technologies';
-import Technology from '../component/technology';
-import Testimonials from '../component/testimonial';
+import Hero from "../component/Hero";
+import Methodology from "../component/Methodology";
+import Services from "../component/Services";
+import TechStack from "../component/TechStack";
+import CTA from "../component/CTA";
+import Footer from "../component/Footer";
 
-const Index = () => {
+export default function Home() {
   return (
     <>
-      <Head>
-        <title>Codetown - Technologies</title>
-      </Head>
-      <Header />
-      <Technologies />
+      <Hero />
       <Services />
-      <Technology />
-      <Process />
-      <Testimonials />
-      <Contact />
+      <TechStack />
+      <Methodology />
+      <CTA />
+      <Footer />
     </>
   );
-};
-
-export default withWebLayout(Index);
+}

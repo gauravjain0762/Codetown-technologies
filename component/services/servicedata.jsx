@@ -28,7 +28,7 @@ export const serviceData = [
   {
     id: 4,
     title: 'Digital Marketing',
-    description: 'We deliver result-driven digital marketing solutions including SEO, social media marketing, paid advertising, and content marketing to help businesses increase visibility.',
+    description: 'We deliver result-driven digital marketing solutions including SEO, social media marketing, paid advertising, and content marketing to help businesses increase visibility .',
     img: '/images/services/Group.png',
     link: '#',
     color: '#FFE3E9'

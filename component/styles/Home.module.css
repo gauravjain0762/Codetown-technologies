@@ -1,0 +1,96 @@
+/* ENGINEERING DNA SECTION */
+.techDNA {
+  display: flex;
+  gap: 60px;
+  background: #020b16;
+  padding: 80px 60px;
+  color: white;
+}
+
+/* LEFT SIDE */
+.left {
+  width: 30%;
+}
+
+.left h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.left p {
+  color: #94a3b8;
+  font-size: 14px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menuItem {
+  padding: 12px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #94a3b8;
+  transition: 0.3s;
+}
+
+.menuItem:hover {
+  background: #0b1f33;
+}
+
+.active {
+  background: #0b1f33;
+  border-left: 3px solid #22d3ee;
+  color: #22d3ee;
+}
+
+/* RIGHT SIDE */
+.right {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* CARD */
+.techCard {
+  background: #0b1f33;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.techCard:hover {
+  transform: translateY(-5px);
+  border: 1px solid #22d3ee;
+}
+
+/* ICON */
+.icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #22d3ee;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .techDNA {
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .right {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
