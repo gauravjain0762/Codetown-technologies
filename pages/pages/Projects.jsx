@@ -225,6 +225,7 @@ const projects = [
 
 export default function Projects() {
   const [filter, setFilter] = useState("All");
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
   const filtered =
     filter === "All"
@@ -248,12 +249,9 @@ export default function Projects() {
     </div>
 
     <div className={styles.socialLinks}>
-    <a href="https://twitter.com" target="_blank">
-      <FaTwitter /> Twitter / X
-    </a>
 
     <a href="https://www.upwork.com/freelancers/~01817e3c2339de8bbf" target="_blank">
-      <FaBriefcase /> Upwork
+     Connect via Upwork
     </a>
   </div>
     </div>
@@ -264,7 +262,9 @@ export default function Projects() {
         <div key={i} className={styles.card}>
           
           {/* ✅ IMAGE BOX (ONLY CARD AREA) */}
-          <div className={styles.imageBox}>
+          <div className={styles.imageBox}
+          onClick={() => setSelectedIndex(i)}
+          >
             <img src={p.image} alt={p.title} />
 
             {/* TAGS ON IMAGE */}
@@ -310,6 +310,60 @@ export default function Projects() {
         </div>
       ))}
     </div>
+
+    {selectedIndex !== null && (
+  <div
+    className={styles.modalOverlay}
+    onClick={() => setSelectedIndex(null)}
+  >
+    <div
+      className={styles.modalContent}
+      onClick={(e) => e.stopPropagation()}
+    >
+      {/* CLOSE BUTTON */}
+      <span
+        className={styles.closeBtn}
+        onClick={() => setSelectedIndex(null)}
+      >
+        ✕
+      </span>
+
+      {/* LEFT ARROW */}
+      <button
+        className={styles.leftArrow}
+        onClick={() =>
+          setSelectedIndex(
+            selectedIndex === 0
+              ? filtered.length - 1
+              : selectedIndex - 1
+          )
+        }
+      >
+        ‹
+      </button>
+
+      {/* IMAGE */}
+      <img
+        src={filtered[selectedIndex].image}
+        className={styles.modalImage}
+      />
+
+      {/* RIGHT ARROW */}
+      <button
+        className={styles.rightArrow}
+        onClick={() =>
+          setSelectedIndex(
+            selectedIndex === filtered.length - 1
+              ? 0
+              : selectedIndex + 1
+          )
+        }
+      >
+        ›
+      </button>
+    </div>
+  </div>
+)}
   </section>
 );
 }
