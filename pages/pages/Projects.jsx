@@ -1,6 +1,6 @@
 import styles from "../styles/Portfolio.module.css";
 import { useState } from "react";
-import { FaTwitter, FaBriefcase } from "react-icons/fa";
+import { FaBriefcase } from "react-icons/fa";
 
 const projects = [
   {
@@ -221,6 +221,14 @@ const projects = [
     web: "https://www.arealhomeaway.com/",
     // tags: ["WEB DEV", "REACT + NODE"],
   },
+  {
+    title: "Peflix || Calories Tracker",
+    category: "Python",
+    image: "/images/projects/peflix.jpeg",
+    android: "#",
+    ios: "#",
+    // tags: ["WEB DEV", "REACT + NODE"],
+  },
 ];
 
 export default function Projects() {
@@ -250,9 +258,14 @@ export default function Projects() {
 
     <div className={styles.socialLinks}>
 
-    <a href="https://www.upwork.com/freelancers/~01817e3c2339de8bbf" target="_blank">
-     Connect via Upwork
-    </a>
+     <a
+    href="https://www.upwork.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaBriefcase className={styles.icon} />
+    <span>Connect via Upwork</span>
+  </a>
   </div>
     </div>
 

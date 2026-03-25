@@ -1,5 +1,5 @@
 import styles from "./styles/Footer.module.css";
-import { FaInstagram, FaGlobe, FaComments } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -26,10 +26,14 @@ export default function Footer() {
           </p>
 
           <div className={styles.icons}>
-            <FaGlobe />
-            <FaInstagram />
-            <FaComments />
-          </div>
+  <a
+    href="https://www.linkedin.com/company/code-town-technologies/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaLinkedin />
+  </a>
+</div>
         </div>
 
         {/* NAVIGATION */}

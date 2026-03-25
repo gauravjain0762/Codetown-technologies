@@ -48,7 +48,9 @@ export default function Navbar() {
 
       {/* BUTTON */}
       <button className={styles.btn}>
-        <Link href="/contact">Contact</Link>
+        <Link href="/contact" className={styles.btn}>
+  Contact
+</Link>
       </button>
     </div>
   );

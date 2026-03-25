@@ -81,3 +81,14 @@
     gap: 30px;
   }
 }
+
+.icons a {
+  color: #fff;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.icons a:hover {
+  color: #0a66c2; /* LinkedIn color */
+  transform: scale(1.2);
+}

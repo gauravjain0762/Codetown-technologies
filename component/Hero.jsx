@@ -87,17 +87,14 @@ export default function Hero() {
           </p>
 
           <div className={styles.buttons}>
-            <button className={styles.primary}>
-              <Link href="/contact" style={{ color: "#283340" }}>
-                Initialize Project →
-              </Link>
-            </button>
-            <button className={styles.secondary}>
-              <Link href="/portfolio" style={{ color: "#cbd5e1" }}>
-                View Portfolio
-              </Link>
-            </button>
-          </div>
+  <Link href="/contact" className={styles.primary}>
+    Initialize Project →
+  </Link>
+
+  <Link href="/portfolio" className={styles.secondary}>
+    View Portfolio
+  </Link>
+</div>
         </div>
 
         <div className={styles.right}>

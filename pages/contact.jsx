@@ -1,261 +1,181 @@
-import React from 'react';
-import { Card, Col, Container, Form, Image, Row, Stack } from 'react-bootstrap';
-import withWebLayout from '../component/layout/web/withWebLayout';
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
-import { SubmitButton } from '../component/button/submit';
-import { PageHeader } from '../component/modules/header/pageHeader';
-import { TextBox } from '../component/formik/index';
-import Head from 'next/head';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Pagination, Autoplay } from 'swiper';
-import 'swiper/css/autoplay';
-import 'swiper/css/free-mode';
-import { ContactData } from '../component/data/contactdata';
-import SelectBox from '../component/formik/selectbox';
-
-const ValidationSchema = Yup.object().shape({
-  full_name: Yup.string()
-    .min(2, 'Too Short!')
-    .max(100, 'Too Long!')
-    .required('Full name is required'),
-  email: Yup.string().email('Invalid email').required('Email is required'),
-  phone: Yup.string().required('Phone number is required'),
-});
+import React from "react";
+import { Container, Row, Col, Form } from "react-bootstrap";
+import Head from "next/head";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import withWebLayout from "../component/layout/web/withWebLayout";
+import styles from "./styles/Contact.module.css";
+import Footer from "../component/Footer";
+import Navbar from "../component/Navbar";
 
 const Contact = () => {
   const formik = useFormik({
     initialValues: {
-      full_name: '',
-      email: '',
-      company: '',
-      phone: '',
-      description: '',
+      full_name: "",
+      email: "",
+      phone: "",
+      service: "",
+      message: "",
     },
-    validationSchema: ValidationSchema,
-    onSubmit: async (values) => {
-      console.log('values', values);
+    validationSchema: Yup.object({
+      full_name: Yup.string().required("Required"),
+      email: Yup.string().email("Invalid").required("Required"),
+      phone: Yup.string().required("Required"),
+    }),
+    onSubmit: async (values, { resetForm }) => {
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+          alert("Message sent 🚀");
+          resetForm();
+        }
+      } catch (err) {
+        alert("Error sending message ❌");
+      }
     },
   });
 
-
-  const ServiceOptions = [
-    {
-      id: 'Web Development',
-      name: 'Web Development',
-    },
-    {
-      id: 'Mobile Development',
-      name: 'Mobile Development',
-    },
-    {
-      id: 'UI/UX Design',
-      name: 'UI/UX Design',
-    },
-    {
-      id: 'Digital Marketing',
-      name: 'Digital Marketing',
-    },
-    {
-      id: 'AI - ML App Development',
-      name: 'AI - ML App Development',
-    },
-    {
-      id: 'Hire Dedicated Developers',
-      name: 'Hire Dedicated Developers',
-    },
-  ];
-  const StartOption = [
-    {
-      id: 'Immediate',
-      name: 'Immediate',
-    },
-    {
-      id: 'After a week',
-      name: 'After a week',
-    },
-    {
-      id: 'After a month',
-      name: 'After a month',
-    },
-  ];
   return (
-    <React.Fragment>
+    <>
+    <Navbar />
       <Head>
-        <title>Codetown - Technologies</title>
+        <title>Contact - Codetown</title>
       </Head>
-      <div className='contact-position'>
-        <PageHeader
-          title='Connect with us'
-          subtitle= { <span style={{ textTransform: "none "}}> Get In Touch With Our Experts Today. Reach us at {" "}
-          <a href="tel:+917568547177" style={{color: "#fff", fontWeight: "500"}}>
-            +91 75685 47177 </a>  </span> }
-          bgImage='/images/contact/background.png'
-          classNames='contact-header-image'
-        />
+
+      <div className={styles.cfWrapper}>
+
         <Container>
-          <Row>
+          <Row className="align-items-center">
+
+            {/* LEFT CONTENT */}
             <Col lg={6}>
-              <div className='contact-background-color contact-position-form'>
-                <Card style={{ backgroundColor: 'transparent', border: '0px' }}>
+              <div className={styles.cfLeft}>
+
+                <span className={styles.cfTag}>CONNECTIVITY ENGINE</span>
+
+                <h1 className={styles.cfTitle}>
+            Let’s Architect Your <br />
+            <span>Digital Future</span>
+          </h1>
+
+                <p className={styles.cfDesc}>
+            Bridge the gap between vision and execution...
+          </p>
+
+                {/* FORM */}
+                <div className={styles.cfFormBox}>
+
                   <Form onSubmit={formik.handleSubmit}>
-                    <Row className="contact-form-row">
 
-  {/* Full Name */}
-  <Col xs={12}>
-    <TextBox
-      className='contact-form-label'
-      placeholder='Full Name*'
-      name="full_name"
-      label="Full Name"
-      value={formik.values.full_name}
-      handleChange={formik.handleChange}
-      error={formik.touched.full_name && formik.errors.full_name}
-    />
-  </Col>
+                    <div className={styles.cfRow}>
+                      <input
+                        type="text"
+                        name="full_name"
+                        placeholder="Full Name"
+                        onChange={formik.handleChange}
+                        value={formik.values.full_name}
+                      />
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        onChange={formik.handleChange}
+                        value={formik.values.email}
+                      />
+                    </div>
 
-  {/* Email */}
-  <Col xs={12}>
-    <TextBox
-      className='contact-form-label'
-      placeholder='Your Email Address'
-      name="email"
-      label="Email"
-      value={formik.values.email}
-      handleChange={formik.handleChange}
-      error={formik.touched.email && formik.errors.email}
-    />
-  </Col>
-
-  {/* Phone */}
-  <Col xs={12}>
-    <TextBox
-      className='contact-form-label'
-      placeholder='Phone Number'
-      name="phone"
-      type='text'
-      label="Phone Number"
-      value={formik.values.phone}
-      handleChange={(e) => {
-        const value = e.target.value.replace(/\D/g, '');
-        formik.setFieldValue('phone', value);
-      }}
-      error={formik.touched.phone && formik.errors.phone}
-    />
-  </Col>
-
-  {/* Select Service */}
-  <Col xs={12}>
-    <SelectBox
-      option={ServiceOptions}
-      className='contact-form-label'
-      label="Select a Service"
-    />
-  </Col>
-
-  {/* Start Option */}
-  <Col xs={12}>
-    <SelectBox
-      option={StartOption}
-      className='contact-form-label'
-      name="company"
-      label="How soon you want to start?"
-    />
-  </Col>
-
-  {/* Description */}
-  <Col xs={12}>
-    <TextBox
-      className='contact-form-label'
-      name="description"
-      label="Brief about the project"
-      value={formik.values.description}
-      handleChange={formik.handleChange}
-      as="textarea"
-      rows={3}
-      error={formik.touched.description && formik.errors.description}
-    />
-  </Col>
-
-</Row>
-                    <SubmitButton
-                      title='GET STARTED'
-                      variant='primary'
-                      className='about-contact-btn'
+                    <input
+                      type="text"
+                      name="phone"
+                      placeholder="Phone Number"
+                      onChange={formik.handleChange}
+                      value={formik.values.phone}
                     />
+
+                    <select
+                      name="service"
+                      onChange={formik.handleChange}
+                      value={formik.values.service}
+                    >
+                      <option>Python/AI Backend</option>
+                      <option>Mobile App</option>
+                      <option>Web Development</option>
+                      <option>UI/UX Design</option>
+                      <option>Digital Marketing</option>
+                    </select>
+
+                    <textarea
+                      name="message"
+                      placeholder="Project Details"
+                      rows="4"
+                      onChange={formik.handleChange}
+                      value={formik.values.message}
+                    />
+
+                    <button type="submit" className={styles.cfBtn}>
+                      Transmit Requirements →
+                    </button>
+
                   </Form>
-                </Card>
+                </div>
+
               </div>
             </Col>
+
+            {/* RIGHT CONTENT */}
             <Col lg={6}>
-              <Container>
-                <Card className='contact-container'>
-                  <Card.Body className='contact-body'>
-                    <Image src='/images/contact/contact.png' className='contact-logo' fluid />
-                  </Card.Body>
-                </Card>
-                <div>
-                  {/* <Swiper
-                    modules={[FreeMode, Pagination, Autoplay]}
-                    freeMode={true}
-                    autoplay={{
-                      delay: 1500,
-                      disableOnInteraction: false
-                    }}
-                    pagination={{
-                      clickable: true,
-                    }}
-                    breakpoints={{
-                      640: {
-                        slidesPerView: 1,
-                        spaceBetween: 0,
-                      },
-                      768: {
-                        slidesPerView: 1,
-                        spaceBetween: 0,
-                      },
-                      1280: {
-                        slidesPerView: 1,
-                        spaceBetween: 15
-                      }
-                    }}
-                    className="contact-swiper-container"
-                  >
-                    {ContactData && ContactData.map((service, index) => {
-                      return (
-                        <SwiperSlide key={`services${index}`}>
-                          <Card className='contact-card-1' style={{ backgroundColor: service.color }}>
-                            <Card.Body>
-                              <Card.Img className='contact-card-img-1' src={service.vector} />
-                              <Card.Text className='contact-card-text'>
-                                {service.description}
-                              </Card.Text>
-                              <Card.Footer className='contact-footer'>
-                                <Stack direction='horizontal' gap={2}>
-                                  <div className='mt-0'>
-                                    <Card.Title className='contact-card-title-1'>
-                                      {service.title}
-                                    </Card.Title>
-                                    <Card.Text className='contact-card-subtitle'>
-                                      {service.subtitle}
-                                    </Card.Text>
-                                  </div>
-                                </Stack>
-                              </Card.Footer>
-                            </Card.Body>
-                          </Card>
-                        </SwiperSlide>
-                      );
-                    })}
-                  </Swiper> */}
+              <div className={styles.cfRight}>
+
+                <div className={styles.cfCard}>
+                  <h6>HQ HEADQUARTERS</h6>
+                  <p>Basement of HDFC Bank, Nakoda Complex, Rajlaxmi Building, Main Rd, near Hansa Palace Road, Sector 4, Hiran Magri <br /> Udaipur, Rajasthan 313002</p>
                 </div>
-              </Container>
+
+                <div className={styles.cfCard}>
+                  <h6>DIRECT COMMUNICATION</h6>
+                  <p>hr@codeTownTechnologies.com</p>
+                </div>
+
+                <div className={styles.cfCard}>
+                  <h6>NETWORK UPLINK</h6>
+                  <p>+91 7627037613</p>
+                </div>
+
+                <div className={styles.cfMap}>
+                  <img src="/images/contact/map.png" alt="map" />
+                </div>
+
+              </div>
             </Col>
+
           </Row>
         </Container>
+
+        {/* BOTTOM BAR */}
+        <div className={styles.cfBottom}>
+          <Container className="d-flex justify-content-between align-items-center">
+            <p>Our Support Desk operates 24/7 global rotation for enterprise partners</p>
+
+            <div>
+              <button className={styles.cfSupport}>Support Portal</button>
+        <button className={styles.cfDocs}>Documentation</button>
+            </div>
+          </Container>
+        </div>
+
       </div>
-    </React.Fragment>
+      <Footer />
+    </>
   );
 };
 
-export default withWebLayout(Contact);
+export default Contact;

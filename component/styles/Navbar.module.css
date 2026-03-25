@@ -36,19 +36,26 @@
 
 /* BUTTON */
 .btn {
+  display: inline-block;
+  text-decoration: none; /* removes blue underline */
+  
   background: linear-gradient(135deg, #22d3ee, #14b8a6);
   border: none;
-  padding: 10px 18px;
+  padding: 6px 12px;
   border-radius: 8px;
-  color: #001219;
-  font-weight: 500;
+
+  color: #001219; /* text color */
+  font-weight: 300;
+
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
+/* 🔥 Hover effect */
 .btn:hover {
+  color: #ffffff; /* change text color on hover */
   transform: translateY(-2px);
-  /* box-shadow: 0 0 15px rgba(34, 211, 238, 0.4); */
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.4);
 }
 
 .navLinks a {

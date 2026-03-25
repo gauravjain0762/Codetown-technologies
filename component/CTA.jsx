@@ -13,18 +13,14 @@ export default function CTA() {
         </p>
 
         <div className={styles.buttons}>
-          <button className={styles.primary}>
-            <Link href="/contact" style={{ color: "#cbd5e1"}}>
-            Schedule a Consultation
-            </Link>
-          </button>
+  <Link href="/contact" className={styles.primary}>
+    Schedule a Consultation
+  </Link>
 
-          <button className={styles.secondary}>
-            <Link href="/portfolio" style={{ color: "#cbd5e1"}}>
-            View Our Portfolio
-            </Link>
-          </button>
-        </div>
+  <Link href="/portfolio" className={styles.secondary}>
+    View Our Portfolio
+  </Link>
+</div>
       </div>
     </section>
   );
