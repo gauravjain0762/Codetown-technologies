@@ -1,31 +1,14 @@
 import styles from "./styles/Hero.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import Navbar from "./Navbar";
 
 export default function Hero() {
   return (
     <section className={styles.hero}>
       
       {/* NAVBAR */}
-      <div className={styles.navbar}>
-        <Link href="/" className="logo">
-        <Image
-        src="https://res.cloudinary.com/dbazlbkfj/image/upload/v1774359871/Logo_vcrauz.png"
-        alt="Codetown logo"
-        width={200}
-        height={40}
-        />
-        </Link>
-
-        <div className={styles.links}>
-          <Link href="/services">Services</Link>
-          <Link href="/portfolio">Portfolio</Link>
-          <Link href="/contact">About</Link>
-          <Link href="/contact">Contact</Link>
-        </div>
-
-        <button className={styles.cta}><Link href="/contact" style={{ color: "#12263f"}}>Get Started</Link></button>
-      </div>
+      <Navbar />
 
       {/* HERO */}
       <div className={styles.container}>

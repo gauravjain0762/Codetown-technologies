@@ -1,0 +1,362 @@
+/* ================= HERO ================= */
+.hero {
+  background: #020b16;
+  color: white;
+  padding: 40px 60px;
+  /* height: 500px; */
+}
+
+/* NAV */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLinks {
+  display: flex;
+  gap: 25px;
+}
+
+.navLinks a {
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.active {
+  color: #22d3ee !important;
+}
+
+.btn {
+  background: #22d3ee;
+  padding: 8px 18px;
+  border-radius: 8px;
+  color: black;
+}
+
+/* HERO CONTENT */
+.heroContent {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.left h1 {
+  font-size: 56px;
+}
+
+.left span {
+  color: #22d3ee;
+}
+
+/* SLIDER */
+.sliderCard {
+  width: 420px;
+  height: 260px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.label {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #22d3ee;
+}
+
+/* ================= PROJECTS ================= */
+.projects {
+  padding: 80px 60px;
+  background: radial-gradient(circle at top right, #0b2a3c, #020b16 60%);
+}
+
+/* FILTERS */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.filters button {
+  background: #0b1f33;
+  color: #cbd5f5;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filters button:hover {
+  background: #122b45;
+}
+
+.filters .active {
+  background: #22d3ee;
+  color: black;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARD (NO BACKGROUND HERE NOW) */
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= IMAGE CARD (MAIN DESIGN FIX) ================= */
+.imageBox {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+
+  /* 🔥 Only image has card feel */
+  background: linear-gradient(145deg, #0b1f33, #071a2b);
+  padding: 10px;
+
+  border: 1px solid rgba(255,255,255,0.05);
+
+  transition: 0.3s;
+}
+
+.imageBox:hover {
+  transform: translateY(-5px);
+  border: 1px solid #22d3ee;
+}
+
+/* IMAGE */
+.imageBox img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* TAGS ON IMAGE */
+.tags {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  gap: 6px;
+}
+
+.tags span {
+  font-size: 10px;
+  padding: 4px 8px;
+  background: rgba(2, 11, 22, 0.8);
+  border-radius: 12px;
+  color: #22d3ee;
+  border: 1px solid rgba(34,211,238,0.3);
+}
+
+/* ================= TEXT AREA ================= */
+.content {
+  margin-top: 14px;
+}
+
+/* CATEGORY */
+.category {
+  font-size: 11px;
+  color: #22d3ee;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* TITLE */
+.content h3 {
+  font-size: 20px;
+  color: #e2e8f0;
+  margin-bottom: 10px;
+}
+
+/* BUTTONS */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.btn {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+
+  background: rgba(34, 211, 238, 0.1);
+  color: #22d3ee;
+  border: 1px solid rgba(34, 211, 238, 0.3);
+
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #22d3ee;
+  color: black;
+}
+
+/* ================= CTA ================= */
+.cta {
+  margin: 80px;
+  padding: 60px;
+  background: #0b1f33;
+  text-align: center;
+  border-radius: 16px;
+}
+
+.primary {
+  background: #22d3ee;
+  padding: 10px 20px;
+}
+
+.secondary {
+  background: #1e293b;
+  margin-left: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects {
+    padding: 60px 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroContent {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+/* SECTION BACKGROUND */
+.ctaSection {
+  background: #071a2b;
+  padding: 80px 60px;
+}
+
+/* MAIN BOX (🔥 THIS WAS MISSING DESIGN DEPTH) */
+.ctaBox {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 42, 63, 0.9),
+    rgba(8, 24, 38, 0.95)
+  );
+
+  border-radius: 20px;
+  padding: 60px 40px;
+  text-align: center;
+
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  /* 🔥 glow + depth */
+  box-shadow:
+    0 0 60px rgba(34, 211, 238, 0.08),
+    inset 0 0 30px rgba(255, 255, 255, 0.02);
+}
+
+/* 🔥 subtle radial glow like figma */
+.ctaBox::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(34, 211, 238, 0.15),
+    transparent 60%
+  );
+  opacity: 0.8;
+}
+
+/* HEADING */
+.ctaBox h2 {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #dbeafe;
+}
+
+/* BUTTON WRAPPER */
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* PRIMARY BUTTON */
+.primaryBtn {
+  background: linear-gradient(135deg, #22d3ee, #14b8a6);
+  color: #001219;
+  padding: 14px 26px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+}
+
+/* SECONDARY BUTTON */
+.secondaryBtn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #cbd5f5;
+  padding: 14px 26px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.secondaryBtn:hover {
+  border-color: #22d3ee;
+  color: #22d3ee;
+}
+
+.styles.ctaButtons {
+    border-color: #22d3ee;
+  color: #22d3ee;
+}
+
+.primaryBtn {
+  display: inline-block; /* 🔥 important */
+
+  background: linear-gradient(135deg, #22d3ee, #14b8a6);
+  color: #001219;
+  padding: 14px 26px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none; /* 🔥 remove underline */
+}
+
+.ctaBox::before {
+  pointer-events: none; /* 🔥 THIS FIXES CLICK ISSUE */
+}
