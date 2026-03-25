@@ -224,7 +224,7 @@ const projects = [
   {
     title: "Peflix || Calories Tracker",
     category: "Python",
-    image: "/images/projects/peflix.jpeg",
+    image: "/images/projects/Peflix.jpeg",
     android: "#",
     ios: "#",
     // tags: ["WEB DEV", "REACT + NODE"],
