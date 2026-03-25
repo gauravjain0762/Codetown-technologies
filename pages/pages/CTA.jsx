@@ -4,7 +4,10 @@ import Link from "next/link";
 export default function CTA() {
   return (
     <section className={styles.ctaSection}>
-  <div className={styles.ctaButtons}>
+  <div className={styles.ctaBox}>
+    <h2>Ready to build your next breakthrough?</h2>
+
+     <div className={styles.ctaButtons}>
   
   <Link href="/contact" className={styles.primaryBtn}>
     Start Your Project
@@ -13,8 +16,9 @@ export default function CTA() {
   <button className={styles.secondaryBtn}>
     View Our Process
   </button>
-
-</div>
+  </div>
+  </div>
 </section>
   );
 }
+ 
