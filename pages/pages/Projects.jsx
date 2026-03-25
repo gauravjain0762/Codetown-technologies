@@ -1,8 +1,16 @@
 import styles from "../styles/Portfolio.module.css";
 import { useState } from "react";
+import { FaTwitter, FaBriefcase } from "react-icons/fa";
 
 const projects = [
   {
+    title: "EmiratiHub",
+    category: "Mobile",
+    image: "/images/portfolio/EmiratiHub.jpg",
+    android: "#",
+    ios: "#",
+  },
+    {
     title: "Helpio - On Demand Services",
     category: "Mobile",
     image: "/images/projects/Helpio.jpg",
@@ -18,7 +26,7 @@ const projects = [
     // tags: ["MOBILE APP", "REACT NATIVE"],
   },
   {
-    title: "eMASTERSGear | Unlock New Roads",
+    title: "Gear | Unlock New Roads",
     category: "Mobile",
     image: "/images/projects/Gear.jpg",
     android: "https://play.google.com/store/apps/details?id=com.devicebee.gear&hl=en",
@@ -47,7 +55,7 @@ const projects = [
     image: "/images/projects/MyStylist.jpg",
     android: "https://play.google.com/store/apps/details?id=com.mystylist.user&hl=en_IN&pli=1",
     ios: "https://apps.apple.com/us/app/mystylist-book-a-stylist/id6475633914",
-    tags: ["MOBILE APP", "REACT NATIVE"],
+    // tags: ["MOBILE APP", "REACT NATIVE"],
   },
   {
     title: "My Stylist Partner",
@@ -55,7 +63,7 @@ const projects = [
     image: "/images/projects/My Stylist Partner.jpg",
     android: "https://play.google.com/store/apps/details?id=com.mystylistexpert&hl=en_IN",
     ios: "https://apps.apple.com/us/app/mystylist-partner/id6474432144",
-    tags: ["MOBILE APP", "REACT NATIVE"],
+    // tags: ["MOBILE APP", "REACT NATIVE"],
   },
   {
     title: "BTP ASTraM",
@@ -63,7 +71,7 @@ const projects = [
     image: "/images/projects/BTP AsTraM.jpg",
     android: "https://play.google.com/store/apps/details?id=com.BTPASTraM&hl=en_IN&pli=1",
     ios: "https://apps.apple.com/in/app/btp-astram/id6736525283",
-    tags: ["MOBILE APP", "REACT NATIVE"],
+    // tags: ["MOBILE APP", "REACT NATIVE"],
   },
   {
     title: "Pesabase",
@@ -71,7 +79,7 @@ const projects = [
     image: "/images/projects/Pesabase.jpg",
     android: "https://play.google.com/store/apps/details?id=com.pesabase.app&hl=en_IN&pli=1",
     ios: "https://apps.apple.com/in/app/pesabase/id1557420579?platform=iphone",
-    tags: ["MOBILE APP", "REACT NATIVE"],
+    // tags: ["MOBILE APP", "REACT NATIVE"],
   },
   {
     title: "P2P MOTORS",
@@ -79,7 +87,7 @@ const projects = [
     image: "/images/projects/P2P Motors.jpg",
     // android: "#",
     ios: "https://apps.apple.com/us/app/p2p-motors/id6744048096",
-    tags: ["MOBILE APP", "REACT NATIVE"],
+    // tags: ["MOBILE APP", "REACT NATIVE"],
   },
   {
     title: "NGI Health App",
@@ -87,7 +95,7 @@ const projects = [
     image: "/images/projects/NGI Health App.jpg",
     android: "https://play.google.com/store/apps/details?id=com.ngiapp&hl=en",
     ios: "https://apps.apple.com/in/app/ngi-health-app/id6752468976",
-    tags: ["MOBILE APP", "REACT NATIVE"],
+    // tags: ["MOBILE APP", "REACT NATIVE"],
   },
   {
     title: "WakeMate Connect",
@@ -95,7 +103,7 @@ const projects = [
     image: "/images/projects/Wakemate connect.jpg",
     // android: "",
     ios: "https://apps.apple.com/gb/app/wakemate-connect/id6504682990",
-    tags: ["MOBILE APP", "REACT NATIVE"],
+    // tags: ["MOBILE APP", "REACT NATIVE"],
   },
   {
     title: "Karteco: Circulating Goodness",
@@ -103,7 +111,7 @@ const projects = [
     image: "/images/projects/Karteco.jpg",
     android: "https://play.google.com/store/apps/details?id=com.karteco",
     ios: "https://apps.apple.com/us/app/karteco-circulating-goodness/id6754075415",
-    tags: ["MOBILE APP", "REACT NATIVE"],
+    // tags: ["MOBILE APP", "REACT NATIVE"],
   },
   {
     title: "Digits App",
@@ -111,7 +119,7 @@ const projects = [
     image: "/images/projects/Digits.jpg",
     // android: "#",
     ios: "https://apps.apple.com/in/app/digits-app/id6751881395",
-    tags: ["MOBILE APP", "REACT NATIVE"],
+    // tags: ["MOBILE APP", "REACT NATIVE"],
   },
   {
     title: "Status Noww",
@@ -119,7 +127,7 @@ const projects = [
     image: "/images/projects/Status noww.jpg",
     android: "https://play.google.com/store/apps/details?id=com.statusnow&hl=en",
     ios: "#",
-    tags: ["MOBILE APP", "REACT NATIVE"],
+    // tags: ["MOBILE APP", "REACT NATIVE"],
   },
   {
     title: "Black Out 365",
@@ -127,7 +135,7 @@ const projects = [
     image: "/images/projects/Blackout365.jpg",
     // android: "#",
     ios: "https://apps.apple.com/us/app/blackout365/id1575383474",
-    tags: ["MOBILE APP", "REACT NATIVE"],
+    // tags: ["MOBILE APP", "REACT NATIVE"],
   },
   {
     title: "Doctors Plaza",
@@ -193,7 +201,7 @@ const projects = [
     // tags: ["WEB DEV", "REACT + NODE"],
   },
   {
-    title: "ProjectsForce",
+    title: "Projects Force",
     category: "Web",
     image: "/images/portfolio/proje.png",
     web: "https://www.projectsforce.com/",
@@ -226,6 +234,7 @@ export default function Projects() {
  return (
   <section className={styles.projects}>
     {/* FILTER BUTTONS */}
+    <div className={styles.topRow}>
     <div className={styles.filters}>
       {["All", "Web", "Mobile", "Python"].map((f) => (
         <button
@@ -236,6 +245,17 @@ export default function Projects() {
           {f}
         </button>
       ))}
+    </div>
+
+    <div className={styles.socialLinks}>
+    <a href="https://twitter.com" target="_blank">
+      <FaTwitter /> Twitter / X
+    </a>
+
+    <a href="https://www.upwork.com/freelancers/~01817e3c2339de8bbf" target="_blank">
+      <FaBriefcase /> Upwork
+    </a>
+  </div>
     </div>
 
     {/* GRID */}
@@ -259,11 +279,11 @@ export default function Projects() {
 
           {/* ✅ TEXT OUTSIDE CARD */}
           <div className={styles.content}>
-            <span className={styles.category}>
+            {/* <span className={styles.category}>
               {p.category === "Mobile"
                 ? "MOBILE APP"
                 : "WEB"}
-            </span>
+            </span> */}
 
             <h3>{p.title}</h3>
 

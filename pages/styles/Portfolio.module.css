@@ -1,72 +1,151 @@
-/* ================= HERO ================= */
 .hero {
-  background: #020b16;
-  color: white;
-  padding: 40px 60px;
-  /* height: 500px; */
-}
-
-/* NAV */
-.navbar {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(circle at 80% 20%, #0a2a43, #020617 60%);
+  color: #fff;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
-
-.navLinks {
-  display: flex;
-  gap: 25px;
-}
-
-.navLinks a {
-  color: #94a3b8;
-  text-decoration: none;
-}
-
-.active {
-  color: #22d3ee !important;
-}
-
-.btn {
-  background: #22d3ee;
-  padding: 8px 18px;
-  border-radius: 8px;
-  color: black;
-}
-
-/* HERO CONTENT */
-.heroContent {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 60px;
-}
-
-.left h1 {
-  font-size: 56px;
-}
-
-.left span {
-  color: #22d3ee;
-}
-
-/* SLIDER */
-.sliderCard {
-  width: 420px;
-  height: 260px;
-  position: relative;
-  border-radius: 16px;
+  padding: 80px 8%;
   overflow: hidden;
 }
 
+/* LAYOUT */
+.heroContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+/* LEFT */
+.left {
+  flex: 1;
+  max-width: 600px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 2px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(0, 255, 200, 0.1);
+  color: #00e6b8;
+  margin-bottom: 20px;
+}
+
+.left h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.left h1 span {
+  color: #00e6b8;
+}
+
+.left p {
+  font-size: 16px;
+  color: #9ca3af;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.button {
+  padding: 12px 26px;
+  background: #00e6b8;
+  color: #000;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.button:hover {
+  background: #00caa2;
+}
+
+/* RIGHT */
+.right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* MAIN CARD */
+.mainCard {
+  position: relative;
+  width: 420px;
+  height: 280px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* SECOND FLOATING CARD */
+.codeCard {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 300px;
+  height: 180px;
+  border-radius: 14px;
+  overflow: hidden;
+  transform: rotate(-8deg);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+/* IMAGE */
 .img {
   object-fit: cover;
 }
 
-.label {
+/* GLOW EFFECT */
+.mainCard::before {
+  content: "";
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: #22d3ee;
+  inset: -2px;
+  border-radius: 20px;
+  background: linear-gradient(120deg, transparent, #00e6b8, transparent);
+  opacity: 0.2;
+  z-index: -1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .heroContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left h1 {
+    font-size: 42px;
+  }
+
+  .right {
+    margin-top: 50px;
+  }
+
+  .mainCard {
+    width: 100%;
+    max-width: 340px;
+    height: 220px;
+  }
+
+  .codeCard {
+    width: 240px;
+    height: 150px;
+    right: -20px;
+    bottom: -30px;
+  }
 }
 
 /* ================= PROJECTS ================= */
@@ -97,8 +176,9 @@
 }
 
 .filters .active {
-  background: #22d3ee;
-  color: black;
+  /* background: #22d3ee; */
+  border: 2px solid #22d3ee;
+  color: #cbd5f5;
 }
 
 /* GRID */
@@ -359,4 +439,54 @@
 
 .ctaBox::before {
   pointer-events: none; /* 🔥 THIS FIXES CLICK ISSUE */
+}
+
+/* TOP ROW */
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 30px;
+
+  /* 🔥 push slightly up like figma */
+  transform: translateY(-10px);
+}
+
+/* SOCIAL LINKS */
+.socialLinks {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+/* LINK STYLE */
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  color: #94a3b8;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+/* ICON STYLE */
+.socialLinks svg {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* HOVER EFFECT (figma style) */
+.socialLinks a:hover {
+  color: #22d3ee;
+  transform: translateY(-2px);
+}
+
+.socialLinks a:hover svg {
+  color: #22d3ee;
 }

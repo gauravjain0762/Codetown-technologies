@@ -81,12 +81,22 @@
   border: none;
 }
 
+.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.4);
+}
+
 .secondary {
   background: #1e293b;
   color: white;
   padding: 12px 20px;
   border-radius: 6px;
   border: none;
+}
+
+.secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.4);
 }
 
 /* RIGHT CARD */
@@ -130,4 +140,24 @@
   .hero {
     padding: 20px;
   }
+}
+
+.typewriter {
+  font-size: 64px;
+  line-height: 1.2;
+}
+
+.blue {
+  color: #22d3ee;
+}
+
+.cursor {
+  margin-left: 4px;
+  color: #22d3ee;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
 }

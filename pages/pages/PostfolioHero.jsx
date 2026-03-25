@@ -1,31 +1,17 @@
+"use client";
+
 import styles from "../styles/Portfolio.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-
-const images = [
-  "/images/projects/Hero1.jpg",
-  "/images/projects/Hero3.jpg",
-];
 
 export default function PortfolioHero() {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const i = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(i);
-  }, []);
-
   return (
     <section className={styles.hero}>
-      {/* NAVBAR */}
-
-      {/* CONTENT */}
       <div className={styles.heroContent}>
+        
+        {/* LEFT */}
         <div className={styles.left}>
-          <span className={styles.tag}>CASE STUDIES & SHOWCASE</span>
+          <span className={styles.tag}>ARCHITECTING THE FUTURE</span>
 
           <h1>
             Engineering <br />
@@ -39,19 +25,29 @@ export default function PortfolioHero() {
           </p>
         </div>
 
-        {/* RIGHT SLIDER */}
+        {/* RIGHT */}
         <div className={styles.right}>
-          <div className={styles.sliderCard}>
+          
+          {/* MAIN CARD */}
+          <div className={styles.mainCard}>
             <Image
-              src={images[index]}
-              alt="project"
+              src="/images/projects/Hero1.jpg"
+              alt="dashboard"
               fill
               className={styles.img}
             />
-            <span className={styles.label} style={{ color: "black", fontSize: "15px"}}>
-              PYTHON & AI SOLUTIONS
-            </span>
           </div>
+
+          {/* FLOATING CODE CARD */}
+          <div className={styles.codeCard}>
+            <Image
+              src="/images/projects/Hero3.jpg"
+              alt="code"
+              fill
+              className={styles.img}
+            />
+          </div>
+
         </div>
       </div>
     </section>
