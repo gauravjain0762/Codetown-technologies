@@ -12,6 +12,13 @@ $theme-colors: (
   "dark": $color-dark,
 );
 
+/* Disable text selection everywhere */
+* {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none;     /* IE/Edge */
+  user-select: none;         /* Standard */
+}
+
 html,
 body {
   padding: 0;
@@ -3415,3 +3422,4 @@ li {
   from{opacity:0}
   to{opacity:1}
 }
+
