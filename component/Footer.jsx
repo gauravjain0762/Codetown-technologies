@@ -1,5 +1,5 @@
 import styles from "./styles/Footer.module.css";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -47,27 +47,19 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* LEGAL */}
-        <div>
-          <h4>LEGAL</h4>
-          <ul>
-            <li>Privacy</li>
-            <li>Terms</li>
-            <li>Careers</li>
-          </ul>
-        </div>
-
         {/* CONTACT */}
-        <div>
-          <h4>CONTACT</h4>
-          <ul>
-            <li>
-                <a href="mailto:hr@codeTownTechnologies.com" style={{ color: "#cbd5e1"}}>
-                    hr@codeTownTechnologies.com</a>
-                    </li>
-            {/* <li>+1 (555) 902-1029</li> */}
-          </ul>
-        </div>
+        {/* CONTACT */}
+<div className={styles.contact}>
+  <h4>CONTACT</h4>
+  <ul>
+    <li className={styles.emailItem}>
+      <FaEnvelope className={styles.mailIcon} />
+      <a href="mailto:hr@codeTownTechnologies.com">
+        hr@codeTownTechnologies.com
+      </a>
+    </li>
+  </ul>
+</div>
       </div>
 
       {/* BOTTOM */}

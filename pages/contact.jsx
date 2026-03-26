@@ -18,10 +18,27 @@ const Contact = () => {
       message: "",
     },
     validationSchema: Yup.object({
-      full_name: Yup.string().required("Required"),
-      email: Yup.string().email("Invalid").required("Required"),
-      phone: Yup.string().required("Required"),
-    }),
+  full_name: Yup.string()
+    .min(3, "Too short")
+    .required("Full name is required"),
+
+  email: Yup.string()
+    .email("Enter a valid email")
+    .required("Email is required"),
+
+  phone: Yup.string()
+    .matches(/^[0-9]+$/, "Only numbers allowed")
+    .min(10, "Must be at least 10 digits")
+    .max(15, "Too long")
+    .required("Phone number is required"),
+
+  service: Yup.string()
+    .required("Please select a service"),
+
+  message: Yup.string()
+    .min(10, "Too short")
+    .required("Message is required"),
+}),
     onSubmit: async (values, { resetForm }) => {
       try {
         const res = await fetch("/api/contact", {
@@ -72,58 +89,106 @@ const Contact = () => {
           </p>
 
                 {/* FORM */}
-                <div className={styles.cfFormBox}>
-
+                 <div className={styles.cfFormBox}>
                   <Form onSubmit={formik.handleSubmit}>
 
+                    {/* FULL NAME + EMAIL */}
                     <div className={styles.cfRow}>
-                      <input
-                        type="text"
-                        name="full_name"
-                        placeholder="Full Name"
-                        onChange={formik.handleChange}
-                        value={formik.values.full_name}
-                      />
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="Email"
-                        onChange={formik.handleChange}
-                        value={formik.values.email}
-                      />
+                      <div>
+                        <input
+                          type="text"
+                          name="full_name"
+                          placeholder="Full Name"
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          value={formik.values.full_name}
+                        />
+                        {/* ERROR */}
+                        {formik.touched.full_name && formik.errors.full_name && (
+                          <p className={styles.error}>{formik.errors.full_name}</p>
+                        )}
+                      </div>
+
+                      <div>
+                        <input
+                          type="email"
+                          name="email"
+                          placeholder="Email"
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          value={formik.values.email}
+                        />
+                        {/* ERROR */}
+                        {formik.touched.email && formik.errors.email && (
+                          <p className={styles.error}>{formik.errors.email}</p>
+                        )}
+                      </div>
                     </div>
 
-                    <input
-                      type="text"
-                      name="phone"
-                      placeholder="Phone Number"
-                      onChange={formik.handleChange}
-                      value={formik.values.phone}
-                    />
+                    {/* PHONE */}
+                    <div>
+                      <input
+                        type="text"
+                        name="phone"
+                        placeholder="Phone Number"
+                        value={formik.values.phone}
+                        onBlur={formik.handleBlur}
+                        onChange={(e) => {
+                          // ✅ allow only numbers
+                          const value = e.target.value.replace(/\D/g, "");
+                          formik.setFieldValue("phone", value);
+                        }}
+                      />
+                      {formik.touched.phone && formik.errors.phone && (
+                        <p className={styles.error}>{formik.errors.phone}</p>
+                      )}
+                    </div>
 
-                    <select
-                      name="service"
-                      onChange={formik.handleChange}
-                      value={formik.values.service}
+                    {/* SERVICE */}
+                    <div>
+                      <select
+                        name="service"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.service}
+                      >
+                        <option value="">Select Service</option>
+                        <option value="Python/AI Backend">Python/AI Backend</option>
+                        <option value="Mobile App">Mobile App</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="UI/UX Design">UI/UX Design</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                      </select>
+
+                      {formik.touched.service && formik.errors.service && (
+                        <p className={styles.error}>{formik.errors.service}</p>
+                      )}
+                    </div>
+
+                    {/* MESSAGE */}
+                    <div>
+                      <textarea
+                        name="message"
+                        placeholder="Project Details"
+                        rows="4"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.message}
+                      />
+                      {formik.touched.message && formik.errors.message && (
+                        <p className={styles.error}>{formik.errors.message}</p>
+                      )}
+                    </div>
+
+                    {/* SUBMIT BUTTON */}
+                    <button
+                      type="submit"
+                      className={styles.cfBtn}
+                      disabled={!formik.isValid || formik.isSubmitting} // ✅ disable until valid
                     >
-                      <option>Python/AI Backend</option>
-                      <option>Mobile App</option>
-                      <option>Web Development</option>
-                      <option>UI/UX Design</option>
-                      <option>Digital Marketing</option>
-                    </select>
-
-                    <textarea
-                      name="message"
-                      placeholder="Project Details"
-                      rows="4"
-                      onChange={formik.handleChange}
-                      value={formik.values.message}
-                    />
-
-                    <button type="submit" className={styles.cfBtn}>
                       Transmit Requirements →
                     </button>
+
 
                   </Form>
                 </div>
@@ -136,7 +201,7 @@ const Contact = () => {
               <div className={styles.cfRight}>
 
                 <div className={styles.cfCard}>
-                  <h6>HQ HEADQUARTERS</h6>
+                  <h6>Office</h6>
                   <p>Basement of HDFC Bank, Nakoda Complex, Rajlaxmi Building, Main Rd, near Hansa Palace Road, Sector 4, Hiran Magri <br /> Udaipur, Rajasthan 313002</p>
                 </div>
 
@@ -146,13 +211,21 @@ const Contact = () => {
                 </div>
 
                 <div className={styles.cfCard}>
-                  <h6>NETWORK UPLINK</h6>
+                  <h6>Mobile Number</h6>
                   <p>+91 7627037613</p>
                 </div>
 
                 <div className={styles.cfMap}>
-                  <img src="/images/contact/map.png" alt="map" />
-                </div>
+  <iframe
+    src="https://www.google.com/maps?q=Basement+of+HDFC+Bank,+Nakoda+Complex,+Rajlaxmi+Building,+Main+Rd,+near+Hansa+Palace+Road,+Sector+4,+Hiran+Magri,+Udaipur,+Rajasthan+313002&output=embed"
+    width="100%"
+    height="300"
+    style={{ border: 0 }}
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
 
               </div>
             </Col>
@@ -162,13 +235,14 @@ const Contact = () => {
 
         {/* BOTTOM BAR */}
         <div className={styles.cfBottom}>
-          <Container className="d-flex justify-content-between align-items-center">
-            <p>Our Support Desk operates 24/7 global rotation for enterprise partners</p>
+          <Container className="text-center">
+            <p>Your next breakthrough starts with the right technology partner.
+Let’s collaborate to create solutions that are fast, scalable, and future-ready.</p>
 
-            <div>
+            {/* <div>
               <button className={styles.cfSupport}>Support Portal</button>
         <button className={styles.cfDocs}>Documentation</button>
-            </div>
+            </div> */}
           </Container>
         </div>
 

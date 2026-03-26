@@ -11,9 +11,9 @@ export default function Hero() {
   const [text3, setText3] = useState("");
   const [showCursor, setShowCursor] = useState(true);
 
-  const line1 = "Web. Mobile.";
+  const line1 = "Web, Mobile,";
   const line2 = "Python &";
-  const line3 = "Intelligence.";
+  const line3 = "Intelligence";
 
   // ADD THIS STATE (top with other states)
 const [slideIndex, setSlideIndex] = useState(0);

@@ -1,6 +1,6 @@
 .hero {
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   background: radial-gradient(circle at 80% 20%, #0a2a43, #020617 60%);
   color: #fff;
   display: flex;
@@ -441,6 +441,7 @@
   pointer-events: none; /* 🔥 THIS FIXES CLICK ISSUE */
 }
 
+
 /* TOP ROW */
 .topRow {
   display: flex;
@@ -468,7 +469,9 @@
 
   font-size: 15px;
   font-weight: 400;
-
+  padding: 5px;
+  border: 2px solid #22d3ee;
+  border-radius: 20px;
   color: #94a3b8;
   text-decoration: none;
 
@@ -591,5 +594,14 @@
   .closeBtn {
     top: -30px;
     right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .topRow {
+    display: flex;
+    flex-direction: column;   /* ✅ stack */
+    align-items: center;
+    gap: 15px;
   }
 }

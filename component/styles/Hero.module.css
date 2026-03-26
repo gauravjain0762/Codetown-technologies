@@ -1,5 +1,5 @@
 .hero {
-  min-height: 100vh;
+  min-height: 80vh;
   background: radial-gradient(circle at top, #0b1c2c, #020b16);
   color: white;
   padding: 30px 80px;
@@ -98,15 +98,14 @@
 
 .secondary {
   background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
   padding: 12px 20px;
   border-radius: 6px;
-  border: none;
 }
 
 .secondary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 15px rgba(34, 211, 238, 0.4);
+  border-color: #22d3ee;
 }
 
 /* RIGHT CARD */
@@ -115,22 +114,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 600px;
 }
 
 /* PREMIUM CARD */
 .card {
-  width: 380px; /* 🔥 increased size */
-  height: 320px;
+  width: 100%;
+  max-width: 600px;   /* keeps desktop size */
+  height: 420px;
+
   border-radius: 20px;
   overflow: hidden;
   position: relative;
 
-  /* glass effect */
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
 
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-
   transition: transform 0.4s ease;
 }
 

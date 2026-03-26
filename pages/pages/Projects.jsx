@@ -273,7 +273,7 @@ const projects = [
   },
 ];
 
-export default function Projects() {
+export default function   Projects() {
   const [filter, setFilter] = useState("All");
   const [selectedIndex, setSelectedIndex] = useState(null);
 

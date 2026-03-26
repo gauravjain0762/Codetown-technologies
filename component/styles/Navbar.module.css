@@ -74,7 +74,7 @@
   bottom: -5px;
   width: 0%;
   height: 2px;
-  background: #22d3ee;
+  background: #f0f4f5;
   transition: 0.3s;
 }
 
@@ -91,12 +91,10 @@
 /* ACTIVE UNDERLINE + GLOW */
 .active::after {
   width: 100%;
-  /* box-shadow: 0 0 10px #22d3ee, 0 0 20px #22d3ee; */
+  color: #22d3ee;
+  box-shadow: 0 0 10px #22d3ee, 0 0 20px #22d3ee;
 }
 
-.active {
-  /* text-shadow: 0 0 8px rgba(34, 211, 238, 0.8); */
-}
 /* BASE LINK */
 .navLinks a {
   position: relative;
@@ -116,21 +114,85 @@
   height: 2px;
   background: #22d3ee;
   transition: 0.3s ease;
+  color: #22d3ee;
 }
 
 /* HOVER */
 .navLinks a:hover::after {
   width: 100%;
+  color: #22d3ee;
 }
 
 /* ✅ ACTIVE LINK (IMPORTANT CHANGE HERE) */
 .navLinks a.active {
   color: #6b9ea6;
-  /* text-shadow: 0 0 8px rgba(34, 211, 238, 0.8); */
+  text-shadow: 0 0 8px rgba(34, 211, 238, 0.8);
 }
 
 /* ✅ FORCE underline for active */
 .navLinks a.active::after {
   width: 100% !important;
   /* box-shadow: 0 0 10px #22d3ee, 0 0 20px #22d3ee; */
+}
+
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: #22d3ee;
+  cursor: pointer;
+  z-index: 200;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px;
+  }
+
+  /* SHOW hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* HIDE desktop button */
+  .btn {
+    display: none;
+  }
+
+  /* MOBILE MENU */
+  .navLinks {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    background: #021428;
+
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 30px;
+    gap: 25px;
+
+    transition: 0.4s ease;
+  }
+
+  /* SHOW MENU */
+  .showMenu {
+    right: 0;
+  }
+
+  .navLinks a {
+    font-size: 18px;
+  }
+
+  /* MOBILE CONTACT BUTTON */
+  .mobileBtn {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #22d3ee, #14b8a6);
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: #001219;
+    font-weight: 500;
+    text-decoration: none;
+  }
 }

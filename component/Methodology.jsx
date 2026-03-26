@@ -28,14 +28,15 @@ export default function Methodology() {
     <section className={styles.methodology}>
       <div className={styles.container}>
         <h2>The Monolith Methodology</h2>
+
         <p className={styles.subtitle}>
           A rigorous four-stage process designed to ensure your product scales from day one.
         </p>
 
         {/* Timeline */}
         <div className={styles.timeline}>
-          <div className={styles.line}></div>
 
+          {/* STEPS */}
           {steps.map((step, index) => (
             <div key={index} className={styles.step}>
               <div className={styles.circle}>{step.number}</div>
@@ -43,6 +44,12 @@ export default function Methodology() {
               <p>{step.desc}</p>
             </div>
           ))}
+
+          {/* LINE (MOVED BELOW FOR HOVER LOGIC) */}
+          <div className={styles.line}>
+            <div className={styles.activeLine}></div>
+          </div>
+
         </div>
       </div>
     </section>

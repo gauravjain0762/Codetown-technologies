@@ -196,13 +196,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  align-items: stretch;
 }
 
-/* BIG CARD */
-.big {
-  grid-column: span 1;
-  min-height: 180px;
-}
 
 /* NORMAL CARD */
 .card {
@@ -212,12 +208,9 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  height: 100%;  
 }
 
-/* MAKE BIG CARDS LOOK DIFFERENT */
-.big {
-  background: linear-gradient(135deg, #06233f, #083055);
-}
 
 /* HOVER EFFECT (premium feel) */
 .card:hover {
@@ -244,46 +237,133 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  grid-template-areas:
-    "innovation integrity"
-    "precision collaboration";
   gap: 20px;
 }
 
-.innovation {
-  grid-area: innovation;
-}
-
-.integrity {
-  grid-area: integrity;
-}
-
-.precision {
-  grid-area: precision;
-}
-
-.collaboration {
-  grid-area: collaboration;
-}
-
-/* BIG CARDS */
-.innovation,
-.collaboration {
-  padding: 35px;
-  min-height: 180px;
-  background: linear-gradient(135deg, #06233f, #083055);
-}
-
-/* SMALL CARDS */
-.integrity,
-.precision {
-  padding: 25px;
-  min-height: 140px;
-}
 
 .card {
+  background: #06233f;
+  padding: 20px;
+  border-radius: 12px;
+
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between; /* ✅ makes equal spacing */
+
+  min-height: 180px; /* ✅ IMPORTANT */
 }
+
+/* INITIAL STATE */
+.item {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 2.2s ease;
+}
+
+/* WHEN VISIBLE */
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.item span {
+  transition: all 0.3s ease;
+}
+
+.item:hover span {
+  box-shadow: 0 0 10px #00e0b8;
+  transform: scale(1.1);
+}
+
+
+.ctaSection {
+  background: #020b16;
+  padding: 80px 60px;
+  display: flex;
+  justify-content: center;
+}
+
+/* CARD */
+/* CTA */
+.cta {
+  margin-top: 30px;
+  padding: 50px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #003b36, #020617);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.cta h2 {
+  font-size: 28px;
+  color: #dbeafe;
+}
+
+.cta p {
+  color: #94a3b8;
+  margin: 10px 0 20px;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.primary {
+  background: #00ffd0;
+  color: #000;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary:hover {
+    transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+  color: #ffffff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .ctaSection {
+    padding: 60px 20px;
+  }
+
+  .card {
+    padding: 40px 25px;
+  }
+
+  .card h2 {
+    font-size: 30px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    padding: 16px;
+    min-height: 160px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 12px;
+    -webkit-line-clamp: 5;
+  }
+}
+

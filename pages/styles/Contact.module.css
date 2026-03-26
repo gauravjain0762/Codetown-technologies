@@ -11,6 +11,12 @@
   padding-right: 40px;
 }
 
+.error {
+  color: #ff6b6b;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
 .cfTag {
   color: #00f5c4;
   font-size: 12px;
@@ -136,9 +142,12 @@
   border: 1px solid rgba(255,255,255,0.08);
 }
 
-.cfMap img {
+.cfMap iframe {
   width: 100%;
-  opacity: 0.7;
+  height: 300px;
+  border: none;
+  border-radius: 12px;
+  filter: grayscale(100%) brightness(0.7); /* 🔥 premium dark look */
 }
 
 /* BOTTOM */
@@ -204,3 +213,25 @@
   background: #021428;
   color: #fff;
 }
+
+.cfRow {
+  display: flex;
+  gap: 15px;
+}
+
+.cfRow > div {
+  flex: 1; /* ✅ both fields take equal width */
+}
+
+/* Fix input alignment properly */
+.cfFormBox input {
+  display: block;
+  width: 100%;
+}
+
+/* OPTIONAL: improve placeholder alignment */
+.cfFormBox input::placeholder {
+  color: #8a94a6;
+  text-align: left; /* ensure consistent alignment */
+}
+

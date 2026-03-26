@@ -130,7 +130,7 @@ export default function Services() {
 
           <div className={styles.buttons}>
             <button className={styles.primary}>Start Configuration</button>
-            <button className={styles.secondary}>View Our Codex</button>
+            {/* <button className={styles.secondary}>View Our Codex</button> */}
           </div>
         </div>
       </section>

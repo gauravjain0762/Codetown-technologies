@@ -39,6 +39,15 @@
   height: 2px;
   background: rgba(255, 255, 255, 0.1);
   z-index: 0;
+  overflow: hidden;
+}
+
+/* ANIMATED LINE */
+.activeLine {
+  height: 100%;
+  width: 0%;
+  background: #22d3ee;
+  transition: width 0.5s ease;
 }
 
 /* STEP */
@@ -91,4 +100,34 @@
   .step {
     width: 100%;
   }
+}
+
+/* HOVER EFFECT PROGRESS */
+
+/* Step 1 */
+.step:nth-child(2):hover ~ .line .activeLine {
+  width: 25%;
+}
+
+/* Step 2 */
+.step:nth-child(3):hover ~ .line .activeLine {
+  width: 50%;
+}
+
+/* Step 3 */
+.step:nth-child(4):hover ~ .line .activeLine {
+  width: 75%;
+}
+
+/* Step 4 */
+.step:nth-child(5):hover ~ .line .activeLine {
+  width: 100%;
+}
+
+.step:hover .circle {
+  background: #22d3ee;
+  color: #071a2b;
+  box-shadow: 0 0 15px #22d3ee;
+  transform: scale(1.1);
+  transition: 0.3s;
 }
