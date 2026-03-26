@@ -12,6 +12,7 @@ import {
   FaPython,
   FaAws,
   FaDocker,
+  FaCloud,
 } from "react-icons/fa";
 
 import {
@@ -103,6 +104,7 @@ export default function TechStack() {
       { name: "GitHub", icon: <SiGithub /> },
       { name: "Kubernetes", icon: <SiKubernetes /> },
       { name: "DigitalOcean", icon: <SiDigitalocean /> },
+      { name: "Linode", icon: <FaCloud /> },
     ],
   };
 
@@ -112,7 +114,7 @@ export default function TechStack() {
       <div className={styles.left}>
         <h2>Our Engineering DNA</h2>
         <p>
-          We don’t just use tools; we master the underlying protocols. Explore
+          We don’t just use tools, we master the underlying protocols. Explore
           the core technologies that power our monoliths.
         </p>
 

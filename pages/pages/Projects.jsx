@@ -7,8 +7,8 @@ const projects = [
     title: "EmiratiHub",
     category: "Mobile",
     image: "/images/portfolio/EmiratiHub.jpg",
-    android: "#",
-    ios: "#",
+    // android: "#",
+    ios: "https://apps.apple.com/us/app/emiratihub/id6753808339",
   },
   {
     title: "Paycio | digital crypto transactions",
@@ -41,16 +41,23 @@ const projects = [
   {
     title: "eMasters",
     category: "Mobile",
-    image: "/images/projects/Mentools.jpeg",
-    android: "https://play.google.com/store/apps/details?id=com.mentools.challenges",
-    ios: "https://apps.apple.com/us/app/mentools-7-day-challenges/id6739540346",
+    image: "/images/projects/eMasters.jpeg",
+    android: "https://play.google.com/store/apps/details?id=pro.emasters&hl=en_IN&gl=US",
+    // ios: "https://apps.apple.com/us/app/mentools-7-day-challenges/id6739540346",
   },
    {
     title: "Save Me",
     category: "Mobile",
-    image: "/images/projects/Mentools.jpeg",
-    android: "https://play.google.com/store/apps/details?id=com.mentools.challenges",
-    ios: "https://apps.apple.com/us/app/mentools-7-day-challenges/id6739540346",
+    image: "/images/projects/Save.jpeg",
+    android: "https://play.google.com/store/apps/details?id=app.saveme",
+    ios: "https://apps.apple.com/app/save-me-food-waste/id6444713924",
+  },
+  {
+    title: "Saffo Social",
+    category: "Mobile",
+    image: "/images/projects/Saffo.jpeg",
+    android: "https://play.google.com/store/apps/details?id=app.bestprime.saffo&hl=en",
+    ios: "https://apps.apple.com/in/app/saffo/id6677016625",
   },
   {
     title: "wingstopUAE",
@@ -71,7 +78,7 @@ const projects = [
   {
     title: "National Discount Networks Inc",
     category: "Mobile",
-    image: "/images/projects/National Discount Networks Inc.png",
+    image: "/images/projects/National Discount Networks Inc.jpg",
     android: "https://play.google.com/store/apps/details?id=com.nbbi&hl=en_IN",
     ios: "https://apps.apple.com/us/app/national-discount-networks-inc/id1457195898",
     // tags: ["MOBILE APP", "REACT NATIVE"],
@@ -349,7 +356,7 @@ export default function Projects() {
               )}
               {p.web && (
                 <a href={p.web} target="_blank" className={styles.btn}>
-                  Visit
+                  View
                 </a>
               )}
             </div>

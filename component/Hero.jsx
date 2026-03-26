@@ -15,6 +15,26 @@ export default function Hero() {
   const line2 = "Python &";
   const line3 = "Intelligence.";
 
+  // ADD THIS STATE (top with other states)
+const [slideIndex, setSlideIndex] = useState(0);
+
+// ADD THIS ARRAY (inside component, above return)
+const slides = [
+  "/images/projects/ai1.jpg",
+  "/images/projects/ai2.png",
+  "/images/projects/ai3.avif",
+  "/images/projects/ai4.png",
+];
+
+// AUTO SLIDER (ADD inside useEffect BELOW your typing logic)
+useEffect(() => {
+  const interval = setInterval(() => {
+    setSlideIndex((prev) => (prev + 1) % slides.length);
+  }, 3500); // 3.5 sec
+
+  return () => clearInterval(interval);
+}, []);
+
   useEffect(() => {
     let i = 0;
 
@@ -97,13 +117,28 @@ export default function Hero() {
 </div>
         </div>
 
-        <div className={styles.right}>
-          <div className={styles.card}>
-            <p className={styles.small}>CURRENT SPRINT</p>
-            <h3>AI Data Modeling</h3>
-            <span className={styles.code}>0xFA2</span>
-          </div>
-        </div>
+       <div className={styles.right}>
+  <div className={styles.card}>
+
+    {/* SLIDER IMAGE */}
+    <img
+      src={slides[slideIndex]}
+      alt="AI Slide"
+      className={styles.slideImage}
+    />
+
+    {/* DARK OVERLAY */}
+    <div className={styles.overlay}></div>
+
+    {/* TEXT CONTENT */}
+    <div className={styles.cardContent}>
+      {/* <p className={styles.small}>CURRENT SPRINT</p> */}
+      {/* <h3>AI Data Modeling</h3> */}
+      {/* <span className={styles.code}>0xFA2</span> */}
+    </div>
+
+  </div>
+</div>
       </div>
     </section>
   );
