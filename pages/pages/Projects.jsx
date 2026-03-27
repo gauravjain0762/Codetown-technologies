@@ -269,6 +269,7 @@ const projects = [
     image: "/images/projects/Peflix.jpeg",
     android: "#",
     ios: "#",
+    OpenAI: "#",
     // tags: ["WEB DEV", "REACT + NODE"],
   },
 ];
@@ -357,6 +358,11 @@ export default function   Projects() {
               {p.web && (
                 <a href={p.web} target="_blank" className={styles.btn}>
                   View
+                </a>
+              )}
+              {p.OpenAI && (
+                <a href={p.OpenAI} target="_blank" className={styles.btn}>
+                  OpenAI
                 </a>
               )}
             </div>
