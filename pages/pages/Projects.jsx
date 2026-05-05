@@ -264,19 +264,20 @@ const projects = [
     // tags: ["WEB DEV", "REACT + NODE"],
   },
   {
-    title: "Peflix || Calories Tracker",
-    category: "Python",
-    image: "/images/projects/Peflix.jpeg",
-    android: "#",
-    ios: "#",
-    OpenAI: "#",
-    // tags: ["WEB DEV", "REACT + NODE"],
-  },
+  title: "Peflix || Calories Tracker",
+  category: "Python",
+  image: "/images/projects/Peflix.jpeg",
+  android: "#",
+  ios: "#",
+  OpenAI: "#",
+  video: "https://res.cloudinary.com/dbazlbkfj/video/upload/v1777979621/InShot_20260420_155540121_xjwxag.mp4",
+},
 ];
 
 export default function   Projects() {
   const [filter, setFilter] = useState("All");
   const [selectedIndex, setSelectedIndex] = useState(null);
+  const [showPeflixVideo, setShowPeflixVideo] = useState(false);
 
   const filtered =
     filter === "All"
@@ -345,27 +346,51 @@ export default function   Projects() {
 
             {/* ACTION BUTTONS */}
             <div className={styles.actions}>
-              {p.android && (
-                <a href={p.android} target="_blank" className={styles.btn}>
-                  Android
-                </a>
-              )}
-              {p.ios && (
-                <a href={p.ios} target="_blank" className={styles.btn}>
-                  iOS
-                </a>
-              )}
-              {p.web && (
-                <a href={p.web} target="_blank" className={styles.btn}>
-                  View
-                </a>
-              )}
-              {p.OpenAI && (
-                <a href={p.OpenAI} target="_blank" className={styles.btn}>
-                  OpenAI
-                </a>
-              )}
-            </div>
+  {p.video ? (
+    // If project has a video, all buttons open the video modal
+    <>
+      {p.android && (
+        <button onClick={() => setShowPeflixVideo(true)} className={styles.btn}>
+          Android
+        </button>
+      )}
+      {p.ios && (
+        <button onClick={() => setShowPeflixVideo(true)} className={styles.btn}>
+          iOS
+        </button>
+      )}
+      {p.OpenAI && (
+        <button onClick={() => setShowPeflixVideo(true)} className={styles.btn}>
+          OpenAI
+        </button>
+      )}
+    </>
+  ) : (
+    // Normal link buttons for all other projects
+    <>
+      {p.android && (
+        <a href={p.android} target="_blank" className={styles.btn}>
+          Android
+        </a>
+      )}
+      {p.ios && (
+        <a href={p.ios} target="_blank" className={styles.btn}>
+          iOS
+        </a>
+      )}
+      {p.web && (
+        <a href={p.web} target="_blank" className={styles.btn}>
+          View
+        </a>
+      )}
+      {p.OpenAI && (
+        <a href={p.OpenAI} target="_blank" className={styles.btn}>
+          OpenAI
+        </a>
+      )}
+    </>
+  )}
+</div>
           </div>
 
         </div>
@@ -403,6 +428,7 @@ export default function   Projects() {
         ‹
       </button>
 
+
       {/* IMAGE */}
       <img
         src={filtered[selectedIndex].image}
@@ -425,6 +451,34 @@ export default function   Projects() {
     </div>
   </div>
 )}
+  {/* VIDEO MODAL — separate, outside image modal */}
+    {showPeflixVideo && (
+      <div
+        className={styles.modalOverlay}
+        onClick={() => setShowPeflixVideo(false)}
+      >
+        <div
+          className={styles.modalContent}
+          onClick={(e) => e.stopPropagation()}
+          style={{ background: "#000", borderRadius: "12px", padding: "0", overflow: "hidden", maxWidth: "90vw" }}
+        >
+          <span
+            className={styles.closeBtn}
+            onClick={() => setShowPeflixVideo(false)}
+            style={{ position: "absolute", top: "12px", right: "16px", zIndex: 10 }}
+          >
+            ✕
+          </span>
+
+          <video
+            src="https://res.cloudinary.com/dbazlbkfj/video/upload/v1777979621/InShot_20260420_155540121_xjwxag.mp4"
+            controls
+            autoPlay
+            style={{ display: "block", maxWidth: "90vw", maxHeight: "80vh", borderRadius: "12px" }}
+          />
+        </div>
+      </div>
+    )}
   </section>
 );
 }

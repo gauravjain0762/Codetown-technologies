@@ -212,7 +212,7 @@ const Contact = () => {
 
                 <div className={styles.cfCard}>
                   <h6>Mobile Number</h6>
-                  <p>+91 7627037613</p>
+                  <p>+91 9509647637</p>
                 </div>
 
                 <div className={styles.cfMap}>
