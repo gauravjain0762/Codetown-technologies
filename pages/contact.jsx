@@ -207,7 +207,7 @@ const Contact = () => {
 
                 <div className={styles.cfCard}>
                   <h6>DIRECT COMMUNICATION</h6>
-                  <p>hr@codeTownTechnologies.com</p>
+                  <p>hr@codetowntechnologies.in</p>
                 </div>
 
                 <div className={styles.cfCard}>

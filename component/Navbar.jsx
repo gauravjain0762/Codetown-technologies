@@ -71,6 +71,14 @@ export default function Navbar() {
           Portfolio
         </Link>
 
+        <Link
+          href="/OurProducts"
+          className={pathname === "/OurProducts" ? styles.active : ""}
+          onClick={() => setMenuOpen(false)}
+        >
+          Our Products
+        </Link>
+
       </div>
 
       {/* DESKTOP BUTTON */}
