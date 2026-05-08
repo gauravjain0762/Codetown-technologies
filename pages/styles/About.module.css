@@ -313,19 +313,30 @@
 }
 
 .primary {
-  background: #00ffd0;
+  /* background: #00ffd0;
   color: #000;
   border: none;
   padding: 12px 22px;
   border-radius: 10px;
   font-weight: 600;
-  cursor: pointer;
+  cursor: pointer; */
+  display: inline-block;
+  text-decoration: none;
+
+  background: linear-gradient(135deg, #22d3ee, #14b8a6);
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: none;
+
+  color: #001219; /* FIX: no more inline style */
+  font-weight: 500;
+
+  transition: all 0.3s ease;
 }
 
 .primary:hover {
-    transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
-  color: #ffffff;
+   color: #e7b9b9;
+  transform: translateY(-2px) scale(1.03);
 }
 
 /* RESPONSIVE */

@@ -82,11 +82,9 @@ export default function Navbar() {
       </div>
 
       {/* DESKTOP BUTTON */}
-      <button className={styles.btn}>
-        <Link href="/contact" className={styles.btn}>
-          Contact Us
-        </Link>
-      </button>
+      <Link href="/contact" className={styles.btn}>
+        Contact Us
+      </Link>
     </div>
   );
 }

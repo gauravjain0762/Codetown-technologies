@@ -186,7 +186,7 @@ const Contact = () => {
                       className={styles.cfBtn}
                       disabled={!formik.isValid || formik.isSubmitting} // ✅ disable until valid
                     >
-                      Transmit Requirements →
+                      Transmit Requirements
                     </button>
 
 
