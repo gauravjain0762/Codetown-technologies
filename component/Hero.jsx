@@ -108,7 +108,7 @@ useEffect(() => {
 
           <div className={styles.buttons}>
   <Link href="/contact" className={styles.primary}>
-    Initialize Project →
+    Initialize Project 
   </Link>
 
   <Link href="/portfolio" className={styles.secondary}>

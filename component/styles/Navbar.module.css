@@ -30,72 +30,6 @@
   transition: 0.3s;
 }
 
-.navLinks a:hover {
-  color: #22d3ee;
-}
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  text-decoration: none; /* removes blue underline */
-  
-  background: linear-gradient(135deg, #22d3ee, #14b8a6);
-  border: none;
-  padding: 6px 12px;
-  border-radius: 8px;
-
-  color: #001219; /* text color */
-  font-weight: 300;
-
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-/* 🔥 Hover effect */
-.btn:hover {
-  color: #ffffff; /* change text color on hover */
-  transform: translateY(-2px);
-  box-shadow: 0 0 15px rgba(34, 211, 238, 0.4);
-}
-
-.navLinks a {
-  position: relative;
-  color: #cbd5f5;
-  text-decoration: none;
-  font-size: 15px;
-  transition: 0.3s;
-}
-
-/* UNDERLINE ANIMATION */
-.navLinks a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0%;
-  height: 2px;
-  background: #f0f4f5;
-  transition: 0.3s;
-}
-
-/* HOVER EFFECT */
-.navLinks a:hover::after {
-  width: 100%;
-}
-
-/* ACTIVE LINK */
-.active {
-  color: #22d3ee;
-}
-
-/* ACTIVE UNDERLINE + GLOW */
-.active::after {
-  width: 100%;
-  color: #22d3ee;
-  box-shadow: 0 0 10px #22d3ee, 0 0 20px #22d3ee;
-}
-
-/* BASE LINK */
 .navLinks a {
   position: relative;
   color: #cbd5f5;
@@ -114,25 +48,48 @@
   height: 2px;
   background: #22d3ee;
   transition: 0.3s ease;
-  color: #22d3ee;
+  box-shadow: 0 0 0 rgba(34, 211, 238, 0);
 }
 
-/* HOVER */
-.navLinks a:hover::after {
-  width: 100%;
-  color: #22d3ee;
-}
-
-/* ✅ ACTIVE LINK (IMPORTANT CHANGE HERE) */
+/* HOVER + ACTIVE SHOULD MATCH */
+.navLinks a:hover,
 .navLinks a.active {
-  color: #6b9ea6;
-  text-shadow: 0 0 8px rgba(34, 211, 238, 0.8);
+  color: #22d3ee;
 }
 
-/* ✅ FORCE underline for active */
+.navLinks a:hover::after,
 .navLinks a.active::after {
-  width: 100% !important;
-  /* box-shadow: 0 0 10px #22d3ee, 0 0 20px #22d3ee; */
+  width: 100%;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 132px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #f8fafc;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.16), rgba(20, 184, 166, 0.14));
+  border: 1px solid rgba(125, 211, 252, 0.28);
+  box-shadow: 0 10px 30px rgba(2, 8, 23, 0.25);
+  backdrop-filter: blur(10px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease,
+    background 0.25s ease, color 0.25s ease;
+}
+
+/* Hover effect */
+.btn:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+  border-color: rgba(34, 211, 238, 0.45);
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.24), rgba(20, 184, 166, 0.2));
+  box-shadow: 0 14px 32px rgba(2, 8, 23, 0.3);
 }
 
 
