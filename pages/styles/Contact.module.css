@@ -92,9 +92,9 @@
   margin-top: 20px;
   padding: 14px;
   border-radius: 8px;
-  background: linear-gradient(90deg, #00f5c4, #00a8ff);
+  background: linear-gradient(135deg, #22d3ee, #14b8a6);
   border: none;
-  color: #000;
+  color: #001219;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
@@ -102,8 +102,8 @@
 
 /* BUTTON HOVER */
 .cfBtn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 245, 196, 0.3);
+  color: #dbd2d2;
+  transform: translateY(-2px) scale(1.03);
 }
 
 /* RIGHT SIDE */

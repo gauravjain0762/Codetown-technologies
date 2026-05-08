@@ -54,8 +54,8 @@ export default function Footer() {
   <ul>
     <li className={styles.emailItem}>
       <FaEnvelope className={styles.mailIcon} />
-      <a href="mailto:hr@codeTownTechnologies.com">
-        hr@codeTownTechnologies.com
+      <a href="mailto:hr@codetowntechnologies.in">
+        hr@codetowntechnologies.in
       </a>
     </li>
   </ul>
